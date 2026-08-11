@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1200"/>
+  <title>Contact — NexChain Supply Chain Platform</title>
+  <meta name="description" content="Get in touch with the NexChain team. Book a demo, request a pilot, find our global offices or browse FAQs."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/contact.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="#1a2b4a"/>
+        <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav-logo-text">STACKLY</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="services.html"class="nav-link">Services</a>
+      <a href="blog.html"    class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="register.html" class="nav-register">Sign up</a>
+      <a href="login.html" class="nav-login-btn">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="mobile-cta-link">Login →</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — CONTACT HERO (particles)
+═══════════════════════════════════════ -->
+<section class="contact-hero" id="home">
+  <canvas class="particle-canvas" id="contactCanvas"></canvas>
+  <div class="contact-hero-overlay"></div>
+  <div class="contact-hero-content">
+    <span class="section-eye" style="color:rgba(255,255,255,0.5);display:block;margin-bottom:14px">GET IN TOUCH</span>
+    <h1>Let's build something <em>remarkable</em></h1>
+    <p>Whether you're ready to start a pilot or just exploring options — we're here to help. Our team responds within one business day.</p>
+    <div class="contact-quick-links">
+      <a href="#form" class="cql">
+        <span class="material-icons mi">send</span>
+        Send a Message
+      </a>
+      <a href="#offices" class="cql">
+        <span class="material-icons mi">location_on</span>
+        Find an Office
+      </a>
+      <a href="services.html#pricing" class="cql">
+        <span class="material-icons mi">attach_money</span>
+        View Pricing
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — CONTACT FORM + INFO
+═══════════════════════════════════════ -->
+<section class="contact-form-section" id="form">
+  <div class="container">
+    <div class="contact-layout">
+      <!-- Form -->
+      <div class="reveal reveal-left">
+        <span class="section-eye" style="margin-bottom:12px;display:block">SEND US A MESSAGE</span>
+        <h2 class="section-title dark" style="margin-bottom:8px">We'd love to hear from you</h2>
+        <p class="section-sub" style="margin-bottom:32px">Tell us about your supply chain and we'll come back with a personalised assessment — no obligation.</p>
+        <div class="contact-form-wrap">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fname">First Name</label>
+              <input class="form-input" id="fname" type="text" placeholder="James"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lname">Last Name</label>
+              <input class="form-input" id="lname" type="text" placeholder="Richardson"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">Work Email</label>
+              <input class="form-input" id="email" type="email" placeholder="james@company.com"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone (optional)</label>
+              <input class="form-input" id="phone" type="tel" placeholder="+1 555 000 0000"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="company">Company</label>
+              <input class="form-input" id="company" type="text" placeholder="GlobalMart Inc."/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="size">Company Size</label>
+              <select class="form-input" id="size">
+                <option value="">Select…</option>
+                <option>1–50 employees</option>
+                <option>51–500 employees</option>
+                <option>501–5,000 employees</option>
+                <option>5,000+ employees</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group form-group-full">
+              <label class="form-label" for="enquiry">Enquiry Type</label>
+              <select class="form-input" id="enquiry">
+                <option value="">Select…</option>
+                <option>Book a demo</option>
+                <option>Request a free pilot</option>
+                <option>Enterprise pricing</option>
+                <option>Integration question</option>
+                <option>Partnership</option>
+                <option>General enquiry</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group form-group-full">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" placeholder="Tell us about your supply chain — current systems, challenges and what you're trying to achieve…"></textarea>
+            </div>
+          </div>
+          <div class="form-submit-row">
+            <button class="btn-gold" id="contactSubmit" style="padding:14px 32px">Send Message →</button>
+            <span class="form-note">🔒 Your data is encrypted and never shared.</span>
+          </div>
+          <div id="formSuccess" style="display:none;margin-top:16px;padding:16px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);border-radius:12px;color:#059669;font-size:0.875rem;font-weight:600;">
+            ✓ Message sent! We'll be in touch within one business day.
+          </div>
+        </div>
+      </div>
+      <!-- Info cards -->
+      <div class="contact-info reveal reveal-right">
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="material-icons mi">support_agent</span>
+          </div>
+          <div>
+            <h4>Sales &amp; Demos</h4>
+            <p>Book a live walkthrough of the platform with a solutions engineer.<br/><a href="mailto:sales@nexchain.io">sales@nexchain.io</a></p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="material-icons mi">headset_mic</span>
+          </div>
+          <div>
+            <h4>Technical Support</h4>
+            <p>Our support team is available 24/7 for all customers. Average response: &lt;2 hours.<br/><a href="mailto:support@nexchain.io">support@nexchain.io</a></p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="material-icons mi">handshake</span>
+          </div>
+          <div>
+            <h4>Partnerships</h4>
+            <p>System integrators, consultancies and resellers — let's build together.<br/><a href="mailto:partners@nexchain.io">partners@nexchain.io</a></p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="material-icons mi">article</span>
+          </div>
+          <div>
+            <h4>Press &amp; Media</h4>
+            <p>For media enquiries, press releases and interview requests.<br/><a href="mailto:press@nexchain.io">press@nexchain.io</a></p>
+          </div>
+        </div>
+        <!-- Response time badge -->
+        <div style="background:var(--navy);border-radius:var(--radius-lg);padding:24px;display:flex;align-items:center;gap:16px;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(184,134,11,0.15);border:2px solid rgba(184,134,11,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <span class="material-icons" style="color:var(--gold)">schedule</span>
+          </div>
+          <div>
+            <div style="font-weight:700;color:white;font-size:0.88rem">Typical response time</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--gold)">&lt; 4 hours</div>
+            <div style="font-size:0.73rem;color:rgba(255,255,255,0.5)">During business hours (SGT / CET / EST)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — OFFICE LOCATIONS
+═══════════════════════════════════════ -->
+<section class="offices" id="offices">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-eye">GLOBAL OFFICES</span>
+      <h2 class="section-title">Find us around the world</h2>
+      <p class="section-sub" style="margin:0 auto">12 offices. 420 team members. One mission.</p>
+    </div>
+    <div class="offices-grid">
+      <!-- Singapore HQ -->
+      <div class="office-card reveal stagger-1">
+        <div class="office-img off-bg-1">
+          <div class="office-pin"><span class="material-icons" style="color:white;font-size:1rem">location_on</span></div>
+          <div class="office-flag">🇸🇬</div>
+        </div>
+        <div class="office-body">
+          <div class="office-city">Singapore</div>
+          <div class="office-country">Asia-Pacific HQ · Headquarters</div>
+          <div class="office-details">
+            <div class="office-detail"><span class="material-icons mi">location_on</span> One Raffles Quay, North Tower</div>
+            <div class="office-detail"><span class="material-icons mi">phone</span> +65 6521 8800</div>
+            <div class="office-detail"><span class="material-icons mi">schedule</span> Mon–Fri, 9am–6pm SGT</div>
+          </div>
+        </div>
+      </div>
+      <!-- London -->
+      <div class="office-card reveal stagger-2">
+        <div class="office-img off-bg-2">
+          <div class="office-pin"><span class="material-icons" style="color:white;font-size:1rem">location_on</span></div>
+          <div class="office-flag">🇬🇧</div>
+        </div>
+        <div class="office-body">
+          <div class="office-city">London</div>
+          <div class="office-country">Europe, Middle East &amp; Africa</div>
+          <div class="office-details">
+            <div class="office-detail"><span class="material-icons mi">location_on</span> 30 St Mary Axe, London EC3A</div>
+            <div class="office-detail"><span class="material-icons mi">phone</span> +44 20 7946 0800</div>
+            <div class="office-detail"><span class="material-icons mi">schedule</span> Mon–Fri, 9am–6pm CET</div>
+          </div>
+        </div>
+      </div>
+      <!-- New York -->
+      <div class="office-card reveal stagger-3">
+        <div class="office-img off-bg-3">
+          <div class="office-pin"><span class="material-icons" style="color:white;font-size:1rem">location_on</span></div>
+          <div class="office-flag">🇺🇸</div>
+        </div>
+        <div class="office-body">
+          <div class="office-city">New York</div>
+          <div class="office-country">Americas</div>
+          <div class="office-details">
+            <div class="office-detail"><span class="material-icons mi">location_on</span> 1 World Trade Center, Floor 82</div>
+            <div class="office-detail"><span class="material-icons mi">phone</span> +1 212 555 8800</div>
+            <div class="office-detail"><span class="material-icons mi">schedule</span> Mon–Fri, 9am–6pm EST</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Office Map Segment -->
+    <div class="reveal" style="margin-top:64px; text-align:center;">
+      <span class="section-eye">VISIT OUR HEADQUARTERS</span>
+      <h3 class="section-title" style="font-size:1.60rem; margin-top:8px; margin-bottom:28px;">Interactive Office Locator</h3>
+      <div style="border-radius:24px; overflow:hidden; border:1.5px solid var(--border); box-shadow:var(--shadow); height:450px; position:relative;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8199185121303!2d103.85044391533215!3d1.2818137620584487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da190e2b4f997d%3A0xc3f9a7cd63af4bf7!2sOne%20Raffles%20Quay!5e0!3m2!1sen!2ssg!4v1629881880000!5m2!1sen!2ssg" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — FAQ
+═══════════════════════════════════════ -->
+<section class="contact-faq" id="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <h2>Frequently Asked Questions</h2>
+      <p>Can't find your answer? <a href="#form" style="color:var(--gold);font-weight:600">Send us a message.</a></p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">How quickly can we get started? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Our onboarding team can have a sandbox environment running on your data within 48 hours of signing. The full production deployment typically takes 4–8 weeks depending on integration complexity. We've onboarded clients in as little as 2 weeks for simpler deployments.</p></div>
+      </div>
+      <div class="faq-item reveal stagger-1">
+        <button class="faq-q">Do you offer a free pilot or trial? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes — every new client gets a 14-day fully functional pilot on their own live data at zero cost. No credit card required. After the pilot, you'll have real performance benchmarks to make an informed decision.</p></div>
+      </div>
+      <div class="faq-item reveal stagger-2">
+        <button class="faq-q">What systems do you integrate with? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>NexChain has certified pre-built connectors for SAP S/4HANA, SAP ECC, Oracle SCM Cloud, Oracle EBS, Microsoft Dynamics 365, NetSuite, plus 200+ TMS, WMS, MES and carrier systems. If your system isn't on the list, our API team can build a custom connector — typical turnaround is 2–4 weeks.</p></div>
+      </div>
+      <div class="faq-item reveal stagger-3">
+        <button class="faq-q">Is our supply chain data secure? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Security is foundational to everything we build. NexChain is SOC 2 Type II certified, ISO 27001 compliant and GDPR-ready. All data is encrypted at rest (AES-256) and in transit (TLS 1.3). We offer single-tenant cloud, multi-tenant cloud or on-premise deployment depending on your requirements.</p></div>
+      </div>
+      <div class="faq-item reveal stagger-4">
+        <button class="faq-q">What's your uptime guarantee? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Professional plans include a 99.95% uptime SLA. Enterprise plans include a 99.99% uptime SLA with financial penalties if breached. Our actual historical uptime over the past 3 years has been 99.98% — you can check our public status page at status.nexchain.io at any time.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — FOOTER CTA BANNER
+═══════════════════════════════════════ -->
+<section class="footer-cta-banner" id="cta">
+  <div class="fcta-gradient"></div>
+  <div class="fcta-border"></div>
+  <div class="fcta-content reveal">
+    <div class="fcta-text">
+      <h2>Ready to transform your supply chain?</h2>
+      <p>Start your 14-day free pilot today. No credit card, no commitment.</p>
+    </div>
+    <div class="fcta-btns">
+      <a href="404.html" class="btn-gold">Start Free Pilot</a>
+      <a href="404.html" class="btn-outline-white">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="10" fill="#1a2b4a" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        STACKLY
+      </div>
+      <p>Intelligent supply chain orchestration for the modern enterprise.</p>
+      <div class="footer-nl">
+        <input type="email" placeholder="Your email…" id="newsletterEmail"/>
+        <button id="newsletterBtn">Subscribe</button>
+      </div>
+      <div class="footer-social">
+        <a class="fsoc" href="404.html" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.54a29 29 0 0 0 .46 5.12 2.78 2.78 0 0 0 1.95 1.96C5.12 19.08 12 19.08 12 19.08s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96 29 29 0 0 0 .46-5.12 29 29 0 0 0-.46-5.12z"></path><polygon points="9.75 15.02 15.5 11.54 9.75 8.06 9.75 15.02" fill="currentColor"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Quick Links column -->
+    <div class="fl-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Register</a></li>
+        <li><a href="contact.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <div class="fl-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="#form">Send Message</a></li>
+          <li><a href="#offices">Our Offices</a></li>
+          <li><a href="services.html#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="fl-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="fl-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.08)">
+    <div class="footer-bottom container">
+      <p>© 2026 NexChain Technologies Ltd. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/shared.js"></script>
+<script>
+/* Contact page particles */
+(function(){
+  const canvas = document.getElementById('contactCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, pts=[], conns=[];
+  function resize(){ W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight; }
+  window.addEventListener('resize',resize); resize();
+  for(let i=0;i<60;i++) pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.4});
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    // Draw connections
+    for(let i=0;i<pts.length;i++){
+      for(let j=i+1;j<pts.length;j++){
+        const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y;
+        const dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<100){
+          ctx.beginPath();
+          ctx.strokeStyle=`rgba(255,255,255,${0.06*(1-dist/100)})`;
+          ctx.lineWidth=.8;
+          ctx.moveTo(pts[i].x,pts[i].y);
+          ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    pts.forEach(p=>{
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(255,255,255,0.2)'; ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* Contact form submit */
+document.getElementById('contactSubmit')?.addEventListener('click',()=>{
+  const email = document.getElementById('email')?.value;
+  const name  = document.getElementById('fname')?.value;
+  const msg   = document.getElementById('message')?.value;
+  if(email?.includes('@') && name && msg){
+    document.getElementById('formSuccess').style.display='block';
+    document.getElementById('contactSubmit').textContent='✓ Sent!';
+    document.getElementById('contactSubmit').style.background='#10b981';
+    setTimeout(()=>{
+      document.getElementById('formSuccess').style.display='none';
+      document.getElementById('contactSubmit').textContent='Send Message →';
+      document.getElementById('contactSubmit').style.background='';
+      ['fname','lname','email','phone','company','message'].forEach(id=>{
+        const el=document.getElementById(id); if(el) el.value='';
+      });
+    }, 5000);
+  } else {
+    ['email','fname','message'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(el && !el.value){ el.style.borderColor='rgba(220,38,38,0.5)'; setTimeout(()=>el.style.borderColor='',2000); }
+    });
+  }
+});
+
+/* Smooth anchor scroll for quick links */
+document.querySelectorAll('.cql[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target){ e.preventDefault(); const top=target.getBoundingClientRect().top+window.scrollY-80; window.scrollTo({top,behavior:'smooth'}); }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1200"/>
+  <title>Dashboard — STACKLY Supply Chain Platform</title>
+  <meta name="description" content="Stackly Executive Supply Chain Dashboard."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/dashboard.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body class="dashboard-body">
+
+<div class="dash-layout">
+
+  <!-- ═══════════════════════════════════════
+       LEFT SIDEBAR NAVIGATION
+  ═══════════════════════════════════════ -->
+  <aside class="dash-sidebar">
+    <div class="sidebar-top">
+      <a href="dashboard.html" class="sidebar-logo">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="10" fill="var(--accent-cyan)"/>
+          <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
+          <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
+          <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
+        </svg>
+        <span class="sidebar-logo-text">STACKLY</span>
+      </a>
+      <div class="sidebar-subtitle" id="sidebarSubtitle">Supply Chain Dashboard</div>
+
+      <nav class="sidebar-menu" id="sidebarMenu">
+        <a href="#" class="sidebar-item active" data-tab="overview">
+          <span class="material-icons">grid_view</span> Overview
+        </a>
+        <a href="#" class="sidebar-item" data-tab="shipments">
+          <span class="material-icons">local_shipping</span> My Shipments
+        </a>
+        <a href="#" class="sidebar-item" data-tab="hubs">
+          <span class="material-icons">favorite_border</span> Saved Hubs
+        </a>
+        <a href="#" class="sidebar-item" data-tab="operations">
+          <span class="material-icons">account_balance_wallet</span> Operations
+        </a>
+        <a href="#" class="sidebar-item" data-tab="settings">
+          <span class="material-icons">settings</span> Settings
+        </a>
+      </nav>
+    </div>
+
+    <div class="sidebar-logout">
+      <a href="index.html" class="sidebar-item">
+        <span class="material-icons">logout</span> Logout
+      </a>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════
+       MAIN CONTENT AREA
+  ═══════════════════════════════════════ -->
+  <main class="dash-main">
+
+    <!-- Header Row -->
+    <div class="dash-header-row">
+      <div>
+        <h1 class="welcome-title" id="welcomeTitle">Welcome back, Manasasrinivas_Lingala</h1>
+        <div class="welcome-subtitle" id="welcomeSubtitle">Ready for your next extraordinary supply chain milestone?</div>
+      </div>
+
+      <!-- User Profile Badge (Top Right) -->
+      <div class="profile-chip">
+        <div class="profile-chip-text">
+          <span class="profile-chip-name" id="profileName">MANASASRINIVAS_LINGALA</span>
+          <span class="profile-chip-email" id="profileEmail">lingalamanasa123@gmail.com</span>
+          <span class="profile-chip-role" id="profileRole">Supply Chain Manager</span>
+        </div>
+        <div class="profile-avatar-icon">
+          <span class="material-icons">person</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 1: Overview -->
+    <div class="tab-content active" id="tab-overview">
+      <!-- 4 KPI Card Grid Row -->
+      <div class="kpi-row">
+        <!-- Card 1 -->
+        <div class="kpi-card" id="kpiCard1">
+          <div class="kpi-circle-icon">
+            <span class="material-icons" id="kpiIcon1">map</span>
+          </div>
+          <div class="kpi-content">
+            <span class="kpi-label" id="kpiLabel1">Total Shipments</span>
+            <span class="kpi-big-num" id="kpiValue1">24</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="kpi-card" id="kpiCard2">
+          <div class="kpi-circle-icon">
+            <span class="material-icons" id="kpiIcon2">public</span>
+          </div>
+          <div class="kpi-content">
+            <span class="kpi-label" id="kpiLabel2">Active Hubs</span>
+            <span class="kpi-big-num" id="kpiValue2">12</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="kpi-card" id="kpiCard3">
+          <div class="kpi-circle-icon">
+            <span class="material-icons" id="kpiIcon3">star</span>
+          </div>
+          <div class="kpi-content">
+            <span class="kpi-label" id="kpiLabel3">Efficiency Points</span>
+            <span class="kpi-big-num" id="kpiValue3">8,450</span>
+          </div>
+        </div>
+
+        <!-- Card 4 (Highlight Next Dispatch) -->
+        <div class="kpi-card kpi-highlight-box" id="kpiCard4">
+          <div class="kpi-circle-icon" id="kpiIconBg4" style="background:#ffffff;color:#0b121e">
+            <span class="material-icons" id="kpiIcon4">flight_takeoff</span>
+          </div>
+          <div class="kpi-content">
+            <span class="kpi-label" id="kpiLabel4">Next Dispatch</span>
+            <span class="kpi-big-num" id="kpiValue4" style="font-size:1.4rem">Rotterdam (RTM)</span>
+            <span class="kpi-sub-text" id="kpiSubtext4">In 14 days</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom 2-Column Grid -->
+      <div class="dash-bottom-grid">
+
+        <!-- Left Panel: Chart Activity -->
+        <div class="dash-panel">
+          <div class="panel-header">
+            <span class="panel-title" id="chartPanelTitle">Supply Chain Activity</span>
+            <select class="panel-filter-select">
+              <option>This Year</option>
+              <option>Last 6 Months</option>
+              <option>This Month</option>
+            </select>
+          </div>
+
+          <div class="chart-container">
+            <svg class="chart-svg" viewBox="0 0 700 240" fill="none" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.45"/>
+                  <stop offset="100%" stop-color="var(--accent-cyan)" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Grid Lines -->
+              <line x1="0" y1="60" x2="700" y2="60" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4 4"/>
+              <line x1="0" y1="120" x2="700" y2="120" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4 4"/>
+              <line x1="0" y1="180" x2="700" y2="180" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4 4"/>
+
+              <!-- Area Path -->
+              <path id="chartAreaPath" d="M0,220 Q120,180 200,200 T400,60 T600,160 T700,100 L700,240 L0,240 Z" fill="url(#chartGrad)"/>
+
+              <!-- Curve Line -->
+              <path id="chartCurvePath" d="M0,220 Q120,180 200,200 T400,60 T600,160 T700,100" stroke="var(--accent-cyan)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+              <!-- Glowing Nodes -->
+              <circle id="chartNode1" cx="200" cy="200" r="5" fill="var(--accent-cyan)" stroke="#ffffff" stroke-width="2"/>
+              <circle id="chartNode2" cx="400" cy="60" r="6" fill="var(--accent-cyan)" stroke="#ffffff" stroke-width="2"/>
+              <circle id="chartNode3" cx="600" cy="160" r="5" fill="var(--accent-cyan)" stroke="#ffffff" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right Panel: Recent Operations -->
+        <div class="dash-panel">
+          <div class="panel-header">
+            <span class="panel-title" id="opsPanelTitle">Recent Operations</span>
+            <a href="#" class="view-all-link">View all</a>
+          </div>
+
+          <div class="operations-list" id="operationsList">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- New Section: Dynamic Database Table -->
+      <div class="dash-panel" style="margin-top: 24px;">
+        <div class="panel-header">
+          <span class="panel-title" id="tablePanelTitle">Global Node Tracking</span>
+          <button class="panel-filter-select" onclick="window.location.reload();" style="border:1px solid rgba(255,255,255,0.12);background:transparent;cursor:pointer;display:inline-flex;align-items:center;gap:6px;">
+            <span class="material-icons" style="font-size:14px;vertical-align:middle;">refresh</span> Refresh Data
+          </button>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="dash-table">
+            <thead>
+              <tr id="tableHeaderRow">
+                <!-- Dynamically populated headers -->
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: My Shipments -->
+    <div class="tab-content" id="tab-shipments" style="display: none;">
+      <div class="dash-panel">
+        <div class="panel-header">
+          <span class="panel-title">Active Shipments Tracker</span>
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <input type="text" id="shipmentSearch" placeholder="Search Shipments..." style="padding: 8px 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-size: 0.85rem;" />
+            <select class="panel-filter-select" id="shipmentStatusFilter" style="cursor:pointer;">
+              <option value="all">All Shipments</option>
+              <option value="transit">In Transit</option>
+              <option value="delayed">Delayed</option>
+              <option value="delivered">Delivered</option>
+            </select>
+          </div>
+        </div>
+        <div class="shipments-grid" id="shipmentsGrid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px;">
+          <!-- Loaded Dynamically via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Saved Hubs -->
+    <div class="tab-content" id="tab-hubs" style="display: none;">
+      <div class="dash-panel">
+        <div class="panel-header">
+          <span class="panel-title">Monitored Infrastructure Hubs</span>
+          <button class="panel-filter-select" style="border:1px solid rgba(255,255,255,0.12);background:transparent;color:var(--accent-cyan);cursor:pointer;display:inline-flex;align-items:center;gap:6px;">
+            <span class="material-icons" style="font-size:14px;">add</span> Add New Hub
+          </button>
+        </div>
+        <div class="hubs-grid" id="hubsGrid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px;">
+          <!-- Loaded Dynamically via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4: Operations Feed -->
+    <div class="tab-content" id="tab-operations" style="display: none;">
+      <div class="dash-panel">
+        <div class="panel-header">
+          <span class="panel-title">Real-Time Telemetry & Systems Alerts</span>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="pulse-dot green"></span>
+            <span style="font-size:0.75rem; color:var(--dash-sub); text-transform:uppercase; font-weight:700; letter-spacing:0.05em;">Live Feed Connected</span>
+          </div>
+        </div>
+        <div class="operations-log-feed" id="operationsLogFeed" style="display: flex; flex-direction: column; gap: 14px; margin-top: 20px;">
+          <!-- Loaded Dynamically via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 5: Settings -->
+    <div class="tab-content" id="tab-settings" style="display: none;">
+      <div class="dash-panel">
+        <div class="panel-header">
+          <span class="panel-title">Profile & Security Settings</span>
+        </div>
+        <div class="settings-wrap" style="max-width: 600px; margin-top: 20px;">
+          <form id="settingsForm">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--dash-sub); text-transform: uppercase;">Username</label>
+                <input type="text" id="settingsUsername" style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff;" required />
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--dash-sub); text-transform: uppercase;">Email Address</label>
+                <input type="email" id="settingsEmail" style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff;" required />
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--dash-sub); text-transform: uppercase;">New Password (Optional)</label>
+                <input type="password" id="settingsPassword" placeholder="••••••••" style="padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff;" />
+              </div>
+              <div style="margin-top: 10px;">
+                <button type="submit" class="settings-save-btn" id="settingsSaveBtn" style="padding: 12px 28px; background: var(--accent-cyan); border-radius: 100px; color: #0b121e; font-weight: 700; cursor: pointer; border: none; transition: transform 0.2s ease, background 0.2s ease;">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/shared.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Retrieve user data from localStorage (or use defaults)
+    const email = localStorage.getItem('userEmail') || 'lingalamanasa123@gmail.com';
+    const username = localStorage.getItem('userUsername') || 'Manasasrinivas_Lingala';
+    const role = localStorage.getItem('userRole') || 'manager'; // manager, logistics, warehouse, executive
+
+    // 2. Set dynamic theme colors based on role
+    const themeColors = {
+      manager: { hex: '#00f2fe', rgb: '0, 242, 254', label: 'Supply Chain Manager' },
+      logistics: { hex: '#ff9f43', rgb: '255, 159, 67', label: 'Logistics Director' },
+      warehouse: { hex: '#10b981', rgb: '16, 185, 129', label: 'Warehouse Admin' },
+      executive: { hex: '#a55eea', rgb: '165, 94, 234', label: 'Enterprise Executive' }
+    };
+    
+    const activeTheme = themeColors[role] || themeColors.manager;
+    
+    // Set CSS variables dynamically
+    document.documentElement.style.setProperty('--accent-cyan', activeTheme.hex);
+    document.documentElement.style.setProperty('--accent-cyan-rgb', activeTheme.rgb);
+
+    // Update dynamically styled buttons
+    document.querySelectorAll('.settings-save-btn').forEach(btn => {
+      btn.style.background = activeTheme.hex;
+    });
+
+    // 3. Update User Information & Header
+    document.getElementById('welcomeTitle').textContent = `Welcome back, ${username}`;
+    document.getElementById('profileName').textContent = username.toUpperCase();
+    document.getElementById('profileEmail').textContent = email;
+    document.getElementById('profileRole').textContent = activeTheme.label;
+
+    // Update Sidebar subtitle
+    const sidebarSubtitles = {
+      manager: 'Supply Chain Manager Dashboard',
+      logistics: 'Logistics Director Dashboard',
+      warehouse: 'Warehouse Admin Dashboard',
+      executive: 'Enterprise Executive Dashboard'
+    };
+    document.getElementById('sidebarSubtitle').textContent = sidebarSubtitles[role] || sidebarSubtitles.manager;
+
+    // Subtitles and dynamic elements based on role
+    const subtitles = {
+      manager: 'Ready to manage global nodes, carrier schedules, and inventory flow?',
+      logistics: 'Ready to oversee carrier compliance, last-mile efficiency, and global routes?',
+      warehouse: 'Ready to monitor stock levels, warehouse throughput, and bin utilization?',
+      executive: 'Ready to evaluate strategic costs, total supply chain margin, and carbon footprints?'
+    };
+    document.getElementById('welcomeSubtitle').textContent = subtitles[role] || subtitles.manager;
+
+    // 4. Update KPI Cards content
+    const kpis = {
+      manager: [
+        { icon: 'map', label: 'Total Shipments', val: '24' },
+        { icon: 'public', label: 'Active Hubs', val: '12' },
+        { icon: 'star', label: 'Efficiency Points', val: '8,450' },
+        { icon: 'flight_takeoff', label: 'Next Dispatch', val: 'Rotterdam (RTM)', sub: 'In 14 days' }
+      ],
+      logistics: [
+        { icon: 'local_shipping', label: 'On-Time Delivery', val: '98.4%' },
+        { icon: 'alt_route', label: 'Active Carrier Routes', val: '112' },
+        { icon: 'speed', label: 'Fleet Utilization', val: '86.5%' },
+        { icon: 'warning', label: 'Critical Shipment', val: 'London (LHR)', sub: 'Delayed 2 hrs' }
+      ],
+      warehouse: [
+        { icon: 'inventory_2', label: 'Bin Utilization', val: '89.2%' },
+        { icon: 'done_all', label: 'Pick & Pack Accuracy', val: '99.8%' },
+        { icon: 'pending_actions', label: 'Pending Orders', val: '142' },
+        { icon: 'report_problem', label: 'Overcapacity Alert', val: 'New York Hub', sub: '94% Capacity' }
+      ],
+      executive: [
+        { icon: 'trending_up', label: 'Operating Margin', val: '24.6%' },
+        { icon: 'eco', label: 'Total CO2 Reduction', val: '124 Tons' },
+        { icon: 'attach_money', label: 'Quarterly Savings', val: '$1.2M' },
+        { icon: 'assignment', label: 'Board Presentation', val: 'Q3 Review', sub: 'In 5 days' }
+      ]
+    };
+
+    const roleKpis = kpis[role] || kpis.manager;
+    
+    // Card 1
+    document.getElementById('kpiIcon1').textContent = roleKpis[0].icon;
+    document.getElementById('kpiLabel1').textContent = roleKpis[0].label;
+    document.getElementById('kpiValue1').textContent = roleKpis[0].val;
+    
+    // Card 2
+    document.getElementById('kpiIcon2').textContent = roleKpis[1].icon;
+    document.getElementById('kpiLabel2').textContent = roleKpis[1].label;
+    document.getElementById('kpiValue2').textContent = roleKpis[1].val;
+    
+    // Card 3
+    document.getElementById('kpiIcon3').textContent = roleKpis[2].icon;
+    document.getElementById('kpiLabel3').textContent = roleKpis[2].label;
+    document.getElementById('kpiValue3').textContent = roleKpis[2].val;
+    
+    // Card 4 (Highlight)
+    document.getElementById('kpiIcon4').textContent = roleKpis[3].icon;
+    document.getElementById('kpiLabel4').textContent = roleKpis[3].label;
+    document.getElementById('kpiValue4').textContent = roleKpis[3].val;
+    document.getElementById('kpiSubtext4').textContent = roleKpis[3].sub;
+
+    // 5. Update SVG Chart paths and titles
+    const chartTitles = {
+      manager: 'Node Performance Metrics',
+      logistics: 'Carrier Transit Times',
+      warehouse: 'Hourly Packing Throughput',
+      executive: 'Global Cost Reduction Trend'
+    };
+    document.getElementById('chartPanelTitle').textContent = chartTitles[role] || chartTitles.manager;
+
+    const chartPaths = {
+      manager: {
+        area: 'M0,220 Q120,180 200,200 T400,60 T600,160 T700,100 L700,240 L0,240 Z',
+        curve: 'M0,220 Q120,180 200,200 T400,60 T600,160 T700,100',
+        nodes: [[200, 200], [400, 60], [600, 160]]
+      },
+      logistics: {
+        area: 'M0,180 Q150,80 300,140 T500,200 T700,50 L700,240 L0,240 Z',
+        curve: 'M0,180 Q150,80 300,140 T500,200 T700,50',
+        nodes: [[300, 140], [500, 200], [700, 50]]
+      },
+      warehouse: {
+        area: 'M0,100 Q100,150 250,90 T450,180 T700,120 L700,240 L0,240 Z',
+        curve: 'M0,100 Q100,150 250,90 T450,180 T700,120',
+        nodes: [[250, 90], [450, 180], [700, 120]]
+      },
+      executive: {
+        area: 'M0,210 Q120,120 280,160 T480,80 T700,40 L700,240 L0,240 Z',
+        curve: 'M0,210 Q120,120 280,160 T480,80 T700,40',
+        nodes: [[280, 160], [480, 80], [700, 40]]
+      }
+    };
+
+    const roleChart = chartPaths[role] || chartPaths.manager;
+    document.getElementById('chartAreaPath').setAttribute('d', roleChart.area);
+    document.getElementById('chartCurvePath').setAttribute('d', roleChart.curve);
+    
+    // Reposition the nodes
+    document.getElementById('chartNode1').setAttribute('cx', roleChart.nodes[0][0]);
+    document.getElementById('chartNode1').setAttribute('cy', roleChart.nodes[0][1]);
+    document.getElementById('chartNode2').setAttribute('cx', roleChart.nodes[1][0]);
+    document.getElementById('chartNode2').setAttribute('cy', roleChart.nodes[1][1]);
+    document.getElementById('chartNode3').setAttribute('cx', roleChart.nodes[2][0]);
+    document.getElementById('chartNode3').setAttribute('cy', roleChart.nodes[2][1]);
+
+    // 6. Update Recent Operations List
+    const opsTitles = {
+      manager: 'Recent Operations',
+      logistics: 'Carrier Compliance Checks',
+      warehouse: 'Warehouse Bins & Shipments',
+      executive: 'Strategic Portfolio Actions'
+    };
+    document.getElementById('opsPanelTitle').textContent = opsTitles[role] || opsTitles.manager;
+
+    const operations = {
+      manager: [
+        { thumb: 'srv_warehouse.webp', name: 'Rotterdam Hub (RTM)', date: 'Oct 12 - Oct 18', badge: 'Upcoming', badgeStyle: '' },
+        { thumb: 'srv_tracking.webp', name: 'Singapore Terminal', date: 'Nov 02 - Nov 10', badge: 'In Transit', badgeStyle: 'background:rgba(var(--accent-cyan-rgb),0.12);border-color:rgba(var(--accent-cyan-rgb),0.3);color:var(--accent-cyan)' },
+        { thumb: 'srv_last_mile.webp', name: 'Chicago Air Freight', date: 'Dec 01 - Dec 05', badge: 'Scheduled', badgeStyle: 'background:rgba(184,134,11,0.12);border-color:rgba(184,134,11,0.3);color:#b8860b' }
+      ],
+      logistics: [
+        { thumb: 'srv_last_mile.webp', name: 'Maersk Line 042 (Ocean)', date: 'Oct 15 - Oct 25', badge: 'On Schedule', badgeStyle: 'background:rgba(var(--accent-cyan-rgb),0.12);border-color:rgba(var(--accent-cyan-rgb),0.3);color:var(--accent-cyan)' },
+        { thumb: 'srv_tracking.webp', name: 'DHL Express DFW', date: 'Nov 01 - Nov 03', badge: 'Delayed', badgeStyle: 'background:rgba(239,68,68,0.12);border-color:rgba(239,68,68,0.3);color:#ef4444' },
+        { thumb: 'srv_forecasting.webp', name: 'FedEx Route FX-90', date: 'Nov 14 - Nov 16', badge: 'Scheduled', badgeStyle: 'background:rgba(184,134,11,0.12);border-color:rgba(184,134,11,0.3);color:#b8860b' }
+      ],
+      warehouse: [
+        { thumb: 'srv_warehouse.webp', name: 'Intake: Pallet Receivals', date: 'Oct 14 08:00', badge: 'Completed', badgeStyle: 'background:rgba(var(--accent-cyan-rgb),0.12);border-color:rgba(var(--accent-cyan-rgb),0.3);color:var(--accent-cyan)' },
+        { thumb: 'srv_compliance.webp', name: 'Audit: Aisle 4 & 5', date: 'Oct 14 14:30', badge: 'In Progress', badgeStyle: '' },
+        { thumb: 'srv_last_mile.webp', name: 'Dispatch: Order #9802', date: 'Oct 15 06:00', badge: 'Staged', badgeStyle: 'background:rgba(184,134,11,0.12);border-color:rgba(184,134,11,0.3);color:#b8860b' }
+      ],
+      executive: [
+        { thumb: 'srv_analytics.webp', name: 'ESG Audit: Scope 3 Emissions', date: 'Q3 Review', badge: 'Approved', badgeStyle: 'background:rgba(var(--accent-cyan-rgb),0.12);border-color:rgba(var(--accent-cyan-rgb),0.3);color:var(--accent-cyan)' },
+        { thumb: 'srv_compliance.webp', name: 'Cost Review: Asia-Pac Route', date: 'Q3 Analysis', badge: 'Under Review', badgeStyle: 'background:rgba(184,134,11,0.12);border-color:rgba(184,134,11,0.3);color:#b8860b' },
+        { thumb: 'srv_forecasting.webp', name: 'Capital Alloc: Warehousing', date: 'FY27 Budget', badge: 'Planned', badgeStyle: '' }
+      ]
+    };
+
+    const roleOps = operations[role] || operations.manager;
+    const opsListEl = document.getElementById('operationsList');
+    opsListEl.innerHTML = ''; // clear existing
+    
+    roleOps.forEach(op => {
+      const itemHtml = `
+        <div class="op-item">
+          <div class="op-left">
+            <div class="op-thumb" style="background-image: url('images/${op.thumb}');"></div>
+            <div class="op-info">
+              <span class="op-name">${op.name}</span>
+              <span class="op-date">${op.date}</span>
+            </div>
+          </div>
+          <span class="op-badge" style="${op.badgeStyle}">${op.badge}</span>
+        </div>
+      `;
+      opsListEl.insertAdjacentHTML('beforeend', itemHtml);
+    });
+
+    // 7. Update Dynamic Tracking Table Content
+    const tableTitles = {
+      manager: 'Critical Inventory Levels & SKU Tracking',
+      logistics: 'Active Logistics Shipments & Carrier Performance',
+      warehouse: 'Warehouse Bin Allocations & Intake Queues',
+      executive: 'Global Cost Centers & Regional ESG Performance'
+    };
+    document.getElementById('tablePanelTitle').textContent = tableTitles[role] || tableTitles.manager;
+
+    const tableHeaders = {
+      manager: ['SKU / Item', 'Current Hub', 'Stock Level', 'Status', 'Priority'],
+      logistics: ['Route ID', 'Carrier Partner', 'Departure Port', 'Entry Port', 'Transit Status', 'Delay Risk'],
+      warehouse: ['Bin Location', 'Pallet ID', 'Intake Carrier', 'Gross Weight', 'Status', 'Action Required'],
+      executive: ['Cost Center', 'Quarterly Budget', 'Total Spend', 'Variance', 'Carbon Footprint', 'Status']
+    };
+
+    const tableRows = {
+      manager: [
+        { cols: ['SKU-9801 (Lithium Cells)', 'Rotterdam Hub', '4,200 units', 'Optimal Stock', 'High'], statusIdx: 3, badgeStyles: { 'Optimal Stock': 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' } },
+        { cols: ['SKU-4412 (Microchips)', 'Singapore Wharf', '850 units', 'Reorder Alert', 'Critical'], statusIdx: 3, badgeStyles: { 'Reorder Alert': 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' } },
+        { cols: ['SKU-7721 (Chassis)', 'Chicago Warehouse', '12,000 units', 'Overstocked', 'Low'], statusIdx: 3, badgeStyles: { 'Overstocked': 'background:rgba(184,134,11,0.12);color:#b8860b;border:1px solid rgba(184,134,11,0.3)' } },
+        { cols: ['SKU-1090 (Copper)', 'London Depot', '250 units', 'Stockout Risk', 'High'], statusIdx: 3, badgeStyles: { 'Stockout Risk': 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' } }
+      ],
+      logistics: [
+        { cols: ['LD-982', 'Maersk Line', 'Singapore (SIN)', 'Rotterdam (RTM)', 'Ocean Transit', 'Low Risk'], statusIdx: 4, badgeStyles: { 'Ocean Transit': 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)' } },
+        { cols: ['LD-114', 'DHL Express', 'Frankfurt (FRA)', 'London (LHR)', 'Customs Hold', 'High Risk'], statusIdx: 4, badgeStyles: { 'Customs Hold': 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' } },
+        { cols: ['LD-889', 'FedEx Air', 'Tokyo (NRT)', 'Los Angeles (LAX)', 'In Flight', 'Low Risk'], statusIdx: 4, badgeStyles: { 'In Flight': 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' } },
+        { cols: ['LD-045', 'Cosco Shipping', 'Shanghai (PVG)', 'New York (JFK)', 'Staged Origin', 'Medium Risk'], statusIdx: 4, badgeStyles: { 'Staged Origin': 'background:rgba(184,134,11,0.12);color:#b8860b;border:1px solid rgba(184,134,11,0.3)' } }
+      ],
+      warehouse: [
+        { cols: ['Aisle 4-B2', 'PL-9021', 'DHL Freight', '840 kg', 'Stowed', 'None'], statusIdx: 4, badgeStyles: { 'Stowed': 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' } },
+        { cols: ['Receiving Bay 1', 'PL-4402', 'FedEx Trucking', '1,200 kg', 'Unloading', 'Scan Barcode'], statusIdx: 4, badgeStyles: { 'Unloading': 'background:rgba(184,134,11,0.12);color:#b8860b;border:1px solid rgba(184,134,11,0.3)' } },
+        { cols: ['Staging-3', 'PL-1192', 'Local Carrier', '340 kg', 'Staged', 'Print Label'], statusIdx: 4, badgeStyles: { 'Staged': 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)' } },
+        { cols: ['Quarantine Area', 'PL-0821', 'Maersk Supply', '2,100 kg', 'Held', 'QC Inspection'], statusIdx: 4, badgeStyles: { 'Held': 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' } }
+      ],
+      executive: [
+        { cols: ['APAC Sea Carrier', '$450,000', '$412,000', '-$38,000', '72 Tons CO2', 'Under Budget'], statusIdx: 5, badgeStyles: { 'Under Budget': 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' } },
+        { cols: ['EU Air Express', '$180,000', '$210,000', '+$30,000', '145 Tons CO2', 'Over Budget'], statusIdx: 5, badgeStyles: { 'Over Budget': 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' } },
+        { cols: ['North America LTL', '$320,000', '$318,000', '-$2,000', '94 Tons CO2', 'On Track'], statusIdx: 5, badgeStyles: { 'On Track': 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' } },
+        { cols: ['Global WMS Soft', '$150,000', '$150,000', '$0', '0 Tons CO2', 'Completed'], statusIdx: 5, badgeStyles: { 'Completed': 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)' } }
+      ]
+    };
+
+    // Populate Headers
+    const activeHeaders = tableHeaders[role] || tableHeaders.manager;
+    const headerRowEl = document.getElementById('tableHeaderRow');
+    headerRowEl.innerHTML = '';
+    activeHeaders.forEach(header => {
+      const th = document.createElement('th');
+      th.textContent = header;
+      headerRowEl.appendChild(th);
+    });
+
+    // Populate Rows
+    const activeRows = tableRows[role] || tableRows.manager;
+    const tableBodyEl = document.getElementById('tableBody');
+    tableBodyEl.innerHTML = '';
+    activeRows.forEach(row => {
+      const tr = document.createElement('tr');
+      row.cols.forEach((colText, idx) => {
+        const td = document.createElement('td');
+        if (idx === row.statusIdx) {
+          const badge = document.createElement('span');
+          badge.className = 'table-badge';
+          badge.textContent = colText;
+          if (row.badgeStyles[colText]) {
+            badge.setAttribute('style', row.badgeStyles[colText]);
+          }
+          td.appendChild(badge);
+        } else {
+          td.textContent = colText;
+        }
+        tr.appendChild(td);
+      });
+      tableBodyEl.appendChild(tr);
+    });
+
+    // ═══════════════════════════════════════
+    // SPA TAB-SWITCHING SYSTEM
+    // ═══════════════════════════════════════
+    const tabLinks = document.querySelectorAll('#sidebarMenu .sidebar-item');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const tabId = link.getAttribute('data-tab');
+        if (!tabId) return;
+
+        // Toggle active link styles
+        tabLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+        // Toggle tab panels
+        tabContents.forEach(content => {
+          if (content.id === `tab-${tabId}`) {
+            content.style.display = 'block';
+          } else {
+            content.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ═══════════════════════════════════════
+    // POPULATE MY SHIPMENTS TAB
+    // ═══════════════════════════════════════
+    const shipmentsData = [
+      { id: 'NX-8820', cargo: 'Lithium Cell Batteries', carrier: 'Maersk Line', route: 'SIN → RTM', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'Cargo temp: 18.2°C (Optimal) · Lat/Lon: 1.352, 103.819 · Speed: 21 knots' },
+      { id: 'NX-1149', cargo: 'Critical Medical Supplies', carrier: 'DHL Express', route: 'FRA → LHR', status: 'Delayed', statusClass: 'delayed', badgeStyle: 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)', details: 'Held at customs clearance point · Current hold time: 4.5 hours · Temp: 4.0°C' },
+      { id: 'NX-4820', cargo: 'Aluminium Chassis Frames', carrier: 'FedEx Trucking', route: 'CHI → DET', status: 'Delivered', statusClass: 'delivered', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)', details: 'Signature confirmation received · Delivered at Chicago Dock 4 · Weight: 12,400 kg' },
+      { id: 'NX-7721', cargo: 'Semiconductor Wafers', carrier: 'FedEx Air', route: 'TPE → LAX', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'In flight (FX802) · Altitude: 34,000 ft · Climate-controlled vault: Active' }
+    ];
+
+    const shipmentsGridEl = document.getElementById('shipmentsGrid');
+    
+    function renderShipments(data) {
+      shipmentsGridEl.innerHTML = '';
+      data.forEach(ship => {
+        const cardHtml = `
+          <div class="shipment-card" data-status="${ship.statusClass}">
+            <div class="card-header-row">
+              <span class="card-title">${ship.id}</span>
+              <span class="table-badge" style="${ship.badgeStyle}">${ship.status}</span>
+            </div>
+            <div class="card-meta">
+              <div style="font-weight:700; color:#fff; margin-bottom:4px;">${ship.cargo}</div>
+              <div>Carrier: ${ship.carrier} · Route: ${ship.route}</div>
+            </div>
+            <div class="card-data-row">
+              <span style="font-size:0.78rem; opacity:0.8;">${ship.details}</span>
+            </div>
+          </div>
+        `;
+        shipmentsGridEl.insertAdjacentHTML('beforeend', cardHtml);
+      });
+    }
+    renderShipments(shipmentsData);
+
+    const shipmentSearch = document.getElementById('shipmentSearch');
+    const shipmentStatusFilter = document.getElementById('shipmentStatusFilter');
+    
+    function filterShipments() {
+      const query = shipmentSearch.value.toLowerCase();
+      const status = shipmentStatusFilter.value;
+      
+      const filtered = shipmentsData.filter(ship => {
+        const matchesQuery = ship.id.toLowerCase().includes(query) || 
+                             ship.cargo.toLowerCase().includes(query) || 
+                             ship.carrier.toLowerCase().includes(query) || 
+                             ship.route.toLowerCase().includes(query);
+        const matchesStatus = status === 'all' || 
+                              (status === 'transit' && ship.statusClass === 'transit') || 
+                              (status === 'delayed' && ship.statusClass === 'delayed') || 
+                              (status === 'delivered' && ship.statusClass === 'delivered');
+        return matchesQuery && matchesStatus;
+      });
+      renderShipments(filtered);
+    }
+
+    shipmentSearch.addEventListener('input', filterShipments);
+    shipmentStatusFilter.addEventListener('change', filterShipments);
+
+    // ═══════════════════════════════════════
+    // POPULATE SAVED HUBS TAB
+    // ═══════════════════════════════════════
+    const hubsData = [
+      { name: 'Rotterdam Terminal (RTM)', type: 'Seaport Hub', capacity: 78, health: 98, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
+      { name: 'Singapore Changi Cargo (SIN)', type: 'Air Cargo Hub', capacity: 62, health: 99, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
+      { name: 'Chicago Distribution Center (CHI)', type: 'Warehouse Hub', capacity: 92, health: 85, status: 'High Load', badgeStyle: 'background:rgba(184,134,11,0.12);color:#b8860b;border:1px solid rgba(184,134,11,0.3)' },
+      { name: 'London Heathrow Terminal (LHR)', type: 'Customs Terminal', capacity: 45, health: 94, status: 'Congested', badgeStyle: 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' }
+    ];
+
+    const hubsGridEl = document.getElementById('hubsGrid');
+    hubsGridEl.innerHTML = '';
+    hubsData.forEach(hub => {
+      const cardHtml = `
+        <div class="hub-card">
+          <div class="card-header-row">
+            <span class="card-title">${hub.name}</span>
+            <span class="table-badge" style="${hub.badgeStyle}">${hub.status}</span>
+          </div>
+          <div class="card-meta">
+            <div>Type: ${hub.type} · Operational Health: ${hub.health}%</div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--dash-sub);">
+              <span>Capacity Utilization</span>
+              <span>${hub.capacity}%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: ${hub.capacity}%; background:${hub.capacity > 90 ? '#ef4444' : hub.capacity > 75 ? '#b8860b' : 'var(--accent-cyan)'};"></div>
+            </div>
+          </div>
+        </div>
+      `;
+      hubsGridEl.insertAdjacentHTML('beforeend', cardHtml);
+    });
+
+    // ═══════════════════════════════════════
+    // POPULATE OPERATIONS TELEMETRY FEED TAB
+    // ═══════════════════════════════════════
+    const logsData = [
+      { icon: 'info', msg: 'Rotterdam Port Hub: Temperature audit complete. Refrigerator vault set at 4.0°C (Optimal).', time: '12:45:10' },
+      { icon: 'gavel', msg: 'Singapore Airport: Customs clearance processing initiated for Shipment SKU-4412.', time: '12:44:02' },
+      { icon: 'warning', msg: 'System Alert: Port of Singapore reporting high congestion. Delay probability raised to 14%.', time: '12:40:15' },
+      { icon: 'sync', msg: 'Core Telemetry Sync: Database transaction ledger updated successfully for 180 nodes.', time: '12:35:48' },
+      { icon: 'local_shipping', msg: 'FedEx Trucking (Route LD-045): Cargo departs Shanghai PVG depot. Transit active.', time: '12:28:11' }
+    ];
+
+    const logsFeedEl = document.getElementById('operationsLogFeed');
+    logsFeedEl.innerHTML = '';
+    logsData.forEach(log => {
+      const logHtml = `
+        <div class="op-log-item">
+          <div class="log-left">
+            <div class="log-icon-wrap">
+              <span class="material-icons" style="font-size:18px;">${log.icon}</span>
+            </div>
+            <span class="log-message">${log.msg}</span>
+          </div>
+          <span class="log-timestamp">${log.time}</span>
+        </div>
+      `;
+      logsFeedEl.insertAdjacentHTML('beforeend', logHtml);
+    });
+
+    // ═══════════════════════════════════════
+    // POPULATE SETTINGS TAB & HANDLE PROFILE SAVE
+    // ═══════════════════════════════════════
+    document.getElementById('settingsUsername').value = username;
+    document.getElementById('settingsEmail').value = email;
+
+    const settingsForm = document.getElementById('settingsForm');
+    settingsForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const newUsername = document.getElementById('settingsUsername').value.trim();
+      const newEmail = document.getElementById('settingsEmail').value.trim();
+      
+      localStorage.setItem('userUsername', newUsername);
+      localStorage.setItem('userEmail', newEmail);
+      
+      // Update displayed UI elements instantly
+      document.getElementById('welcomeTitle').textContent = `Welcome back, ${newUsername}`;
+      document.getElementById('profileName').textContent = newUsername.toUpperCase();
+      document.getElementById('profileEmail').textContent = newEmail;
+      
+      const saveBtn = document.getElementById('settingsSaveBtn');
+      saveBtn.textContent = '✓ Changes Saved!';
+      saveBtn.style.background = '#10b981';
+      
+      setTimeout(() => {
+        saveBtn.textContent = 'Save Changes';
+        saveBtn.style.background = activeTheme.hex;
+      }, 3000);
+    });
+  });
+</script>
+</body>
+</html>

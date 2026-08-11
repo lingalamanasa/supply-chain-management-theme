@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1200"/>
+  <title>NexChain — Intelligent Supply Chain Platform</title>
+  <meta name="description" content="AI-powered supply chain platform. Real-time visibility, demand forecasting, warehouse automation and last-mile delivery orchestration for the modern enterprise."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/home.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" id="navLogo">
+      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="#1a2b4a"/>
+        <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav-logo-text">STACKLY</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html"    class="nav-link active">Home</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="services.html"class="nav-link">Services</a>
+      <a href="blog.html"    class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="register.html" class="nav-register">Sign up</a>
+      <a href="login.html" class="nav-login-btn">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="mobile-cta-link">Login →</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1: VIDEO HERO
+═══════════════════════════════════════ -->
+<section class="hero" id="home">
+  <!-- Background video -->
+  <video class="hero-video" autoplay muted loop playsinline poster="images/hero_poster.webp">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+  </video>
+  <!-- Gradient overlay -->
+  <div class="hero-gradient"></div>
+  <!-- Particle canvas -->
+  <canvas class="particle-canvas" id="heroCanvas"></canvas>
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="hero-badge">🌐 Intelligent Supply Chain · Est. 2013</div>
+    <h1 class="hero-title">
+      Your Supply Chain is<br/>
+      <em id="typedText">Our Priority</em><span class="cursor"></span>
+    </h1>
+    <p class="hero-sub">
+      AI-powered forecasting, real-time visibility and seamless orchestration,<br/>
+      thoughtfully engineered for the modern enterprise.
+    </p>
+    <!-- Search bar -->
+    <div class="hero-search">
+      <div class="search-field">
+        <label class="search-label">WHAT</label>
+        <input type="text" id="searchSolution" placeholder="Search solutions…"/>
+      </div>
+      <div class="search-field">
+        <label class="search-label">WHERE</label>
+        <input type="text" placeholder="Your industry…"/>
+      </div>
+      <div class="search-field">
+        <label class="search-label">SCALE</label>
+        <input type="text" placeholder="Company size…"/>
+      </div>
+      <button class="search-btn" id="searchBtn" aria-label="Search">🔍</button>
+    </div>
+    <!-- Social proof -->
+    <div class="hero-proof">
+      <div class="proof-avs">
+        <div class="proof-av" style="background:#4f46e5">A</div>
+        <div class="proof-av" style="background:#059669">M</div>
+        <div class="proof-av" style="background:#dc2626">S</div>
+        <div class="proof-av" style="background:#d97706">U</div>
+      </div>
+      <span>2,400+ Enterprises Onboarded</span>
+    </div>
+  </div>
+  <!-- Scroll cue -->
+  <div class="hero-scroll">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2: TRUSTED BY (ticker)
+═══════════════════════════════════════ -->
+<section id="trusted">
+  <div class="ticker-strip">
+    <div class="ticker-track" id="tickerTrack">
+      <span class="ticker-item">Amazon Logistics</span>
+      <span class="ticker-item">DHL Supply Chain</span>
+      <span class="ticker-item">FedEx Enterprise</span>
+      <span class="ticker-item">Walmart Global</span>
+      <span class="ticker-item">Maersk Line</span>
+      <span class="ticker-item">UPS Freight</span>
+      <span class="ticker-item">Caterpillar Inc.</span>
+      <span class="ticker-item">Siemens AG</span>
+      <span class="ticker-item">Bosch Group</span>
+      <span class="ticker-item">Samsung SDS</span>
+      <span class="ticker-item">Honeywell</span>
+      <span class="ticker-item">3M Company</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">Amazon Logistics</span>
+      <span class="ticker-item">DHL Supply Chain</span>
+      <span class="ticker-item">FedEx Enterprise</span>
+      <span class="ticker-item">Walmart Global</span>
+      <span class="ticker-item">Maersk Line</span>
+      <span class="ticker-item">UPS Freight</span>
+      <span class="ticker-item">Caterpillar Inc.</span>
+      <span class="ticker-item">Siemens AG</span>
+      <span class="ticker-item">Bosch Group</span>
+      <span class="ticker-item">Samsung SDS</span>
+      <span class="ticker-item">Honeywell</span>
+      <span class="ticker-item">3M Company</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3: SOLUTIONS GRID
+═══════════════════════════════════════ -->
+<section class="solutions" id="solutions">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eye light">FEATURED SOLUTIONS</span>
+      <h2 class="section-title white">Modules worth deploying</h2>
+      <p class="section-sub light">Hand-picked capabilities loved by supply chain leaders worldwide.</p>
+    </div>
+    <div class="solutions-grid">
+
+      <!-- Flip Card 1 — AI Forecasting -->
+      <div class="flip-card reveal stagger-1">
+        <div class="flip-card-inner">
+          <!-- Front -->
+          <div class="flip-front sol-img-1">
+            <span class="flip-badge">AI / ML</span>
+            <div class="flip-front-icon">
+              <span class="material-icons mi">psychology</span>
+            </div>
+            <div class="flip-front-body">
+              <p class="flip-front-name">AI Demand Forecasting</p>
+              <p class="flip-front-sub">97.2% accuracy · 240+ integrations</p>
+            </div>
+          </div>
+          <!-- Back -->
+          <div class="flip-back">
+            <div>
+              <span class="flip-back-tag">AI / ML</span>
+              <h3>AI Demand Forecasting</h3>
+              <p>Fuses 24 months of historical data with market signals to deliver industry-leading 97.2% forecast accuracy across every SKU and channel.</p>
+            </div>
+            <div>
+              <div class="flip-back-stats">
+                <div class="flip-stat"><span class="sv">97.2%</span><span class="sl">Accuracy</span></div>
+                <div class="flip-stat"><span class="sv">240+</span><span class="sl">Integrations</span></div>
+                <div class="flip-stat"><span class="sv">61%</span><span class="sl">Stockout ↓</span></div>
+              </div>
+              <a href="services.html" class="flip-back-link">Explore →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flip Card 2 — Real-Time Tracking -->
+      <div class="flip-card reveal stagger-2">
+        <div class="flip-card-inner">
+          <div class="flip-front sol-img-2">
+            <span class="flip-badge">IoT</span>
+            <div class="flip-front-icon">
+              <span class="material-icons mi">location_on</span>
+            </div>
+            <div class="flip-front-body">
+              <p class="flip-front-name">Real-Time Tracking</p>
+              <p class="flip-front-sub">Live GPS + IoT · 180+ carriers</p>
+            </div>
+          </div>
+          <div class="flip-back">
+            <div>
+              <span class="flip-back-tag">IoT</span>
+              <h3>Real-Time Tracking</h3>
+              <p>Sub-minute GPS + IoT telemetry across 180+ carrier networks with predictive ETA and automatic exception alerts before delays happen.</p>
+            </div>
+            <div>
+              <div class="flip-back-stats">
+                <div class="flip-stat"><span class="sv">180+</span><span class="sl">Carriers</span></div>
+                <div class="flip-stat"><span class="sv">&lt;1min</span><span class="sl">Refresh</span></div>
+                <div class="flip-stat"><span class="sv">99.9%</span><span class="sl">Uptime</span></div>
+              </div>
+              <a href="services.html" class="flip-back-link">Explore →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flip Card 3 — Warehouse Automation -->
+      <div class="flip-card reveal stagger-3">
+        <div class="flip-card-inner">
+          <div class="flip-front sol-img-3">
+            <span class="flip-badge">Automation</span>
+            <div class="flip-front-icon">
+              <span class="material-icons mi">precision_manufacturing</span>
+            </div>
+            <div class="flip-front-body">
+              <p class="flip-front-name">Warehouse Automation</p>
+              <p class="flip-front-sub">Robotics WMS · 99% accuracy</p>
+            </div>
+          </div>
+          <div class="flip-back">
+            <div>
+              <span class="flip-back-tag">Automation</span>
+              <h3>Warehouse Automation</h3>
+              <p>Robotics WMS with 99% pick accuracy. Integrates with 80+ AMR, AS/RS and conveyor systems with a zero-downtime migration path.</p>
+            </div>
+            <div>
+              <div class="flip-back-stats">
+                <div class="flip-stat"><span class="sv">99%</span><span class="sl">Pick accuracy</span></div>
+                <div class="flip-stat"><span class="sv">80+</span><span class="sl">Robot systems</span></div>
+                <div class="flip-stat"><span class="sv">40%</span><span class="sl">Cost ↓</span></div>
+              </div>
+              <a href="services.html" class="flip-back-link">Explore →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flip Card 4 — Analytics -->
+      <div class="flip-card reveal stagger-1">
+        <div class="flip-card-inner">
+          <div class="flip-front sol-img-4">
+            <span class="flip-badge">Analytics</span>
+            <div class="flip-front-icon">
+              <span class="material-icons mi">bar_chart</span>
+            </div>
+            <div class="flip-front-body">
+              <p class="flip-front-name">Supply Chain Analytics</p>
+              <p class="flip-front-sub">Real-time dashboards · BI exports</p>
+            </div>
+          </div>
+          <div class="flip-back">
+            <div>
+              <span class="flip-back-tag">Analytics</span>
+              <h3>Supply Chain Analytics</h3>
+              <p>Real-time control tower with drill-down to SKU level, predictive risk scoring and one-click exports to Tableau, Power BI and Looker.</p>
+            </div>
+            <div>
+              <div class="flip-back-stats">
+                <div class="flip-stat"><span class="sv">Live</span><span class="sl">Dashboards</span></div>
+                <div class="flip-stat"><span class="sv">50+</span><span class="sl">KPI widgets</span></div>
+                <div class="flip-stat"><span class="sv">3 min</span><span class="sl">Avg. insight</span></div>
+              </div>
+              <a href="services.html" class="flip-back-link">Explore →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flip Card 5 — Compliance -->
+      <div class="flip-card reveal stagger-2">
+        <div class="flip-card-inner">
+          <div class="flip-front sol-img-5">
+            <span class="flip-badge">Compliance</span>
+            <div class="flip-front-icon">
+              <span class="material-icons mi">gavel</span>
+            </div>
+            <div class="flip-front-body">
+              <p class="flip-front-name">Compliance Engine</p>
+              <p class="flip-front-sub">ISO 28000 · 180+ countries</p>
+            </div>
+          </div>
+          <div class="flip-back">
+            <div>
+              <span class="flip-back-tag">Compliance</span>
+              <h3>Compliance Engine</h3>
+              <p>ISO 28000, CTPAT, AEO and 180-country customs documentation, automated trade finance and real-time sanctions screening.</p>
+            </div>
+            <div>
+              <div class="flip-back-stats">
+                <div class="flip-stat"><span class="sv">180+</span><span class="sl">Countries</span></div>
+                <div class="flip-stat"><span class="sv">100%</span><span class="sl">Audit trail</span></div>
+                <div class="flip-stat"><span class="sv">Auto</span><span class="sl">Sanctions check</span></div>
+              </div>
+              <a href="services.html" class="flip-back-link">Explore →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flip Card 6 — Last Mile -->
+      <div class="flip-card reveal stagger-3">
+        <div class="flip-card-inner">
+          <div class="flip-front sol-img-6">
+            <span class="flip-badge">Last Mile</span>
+            <div class="flip-front-icon">
+              <span class="material-icons mi">local_shipping</span>
+            </div>
+            <div class="flip-front-body">
+              <p class="flip-front-name">Last-Mile Delivery AI</p>
+              <p class="flip-front-sub">Route AI · 34% cost reduction</p>
+            </div>
+          </div>
+          <div class="flip-back">
+            <div>
+              <span class="flip-back-tag">Last Mile</span>
+              <h3>Last-Mile Delivery AI</h3>
+              <p>Dynamic route optimisation, carrier selection AI and customer communication automation. Average 34% cost reduction in 90 days.</p>
+            </div>
+            <div>
+              <div class="flip-back-stats">
+                <div class="flip-stat"><span class="sv">34%</span><span class="sl">Cost ↓</span></div>
+                <div class="flip-stat"><span class="sv">90d</span><span class="sl">ROI timeline</span></div>
+                <div class="flip-stat"><span class="sv">AI</span><span class="sl">Route engine</span></div>
+              </div>
+              <a href="services.html" class="flip-back-link">Explore →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4: PLATFORM BENTO (dark)
+═══════════════════════════════════════ -->
+<section class="bento-section" id="network">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eye light">PLATFORM CAPABILITIES</span>
+      <h2 class="section-title white">Beyond the ordinary</h2>
+      <p class="section-sub light">Exclusive access to the world's most advanced supply chain intelligence.</p>
+    </div>
+    <div class="bento-grid">
+      <!-- Large card -->
+      <div class="bento-card bento-large reveal reveal-left">
+        <div class="bento-img bento-img-1">
+          <div class="bento-glass-tag top-left">
+            <span class="pulse-dot green"></span> Live Sync · 99.4%
+          </div>
+          <div class="bento-glass-tag bottom-right">
+            <span class="material-icons mi" style="font-size: 14px; color: var(--gold);">radar</span> AI Risk Engine Active
+          </div>
+        </div>
+        <div class="bento-body">
+          <span class="bento-tag">Control Tower</span>
+          <h3>Unified visibility across every node</h3>
+          <p>Monitor suppliers, carriers and warehouses in a single real-time command centre — with AI alerts before disruptions cascade.</p>
+          <a href="404.html" class="bento-btn">Book now →</a>
+        </div>
+      </div>
+      <!-- Right stack -->
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div class="bento-card reveal reveal-right stagger-1">
+          <div class="bento-img bento-img-2">
+            <div class="bento-glass-tag top-left">
+              <span class="pulse-dot gold"></span> 148 Nodes Monitored
+            </div>
+          </div>
+          <div class="bento-body">
+            <span class="bento-tag">Analytics</span>
+            <h3>Predictive Risk Intelligence</h3>
+            <p>AI scores and alerts across your entire supplier network before disruptions cascade into delays.</p>
+            <a href="404.html" class="bento-btn">Learn more →</a>
+          </div>
+        </div>
+        <div class="bento-card reveal reveal-right stagger-2">
+          <div class="bento-img bento-img-3">
+            <div class="bento-glass-tag top-left">
+              <span class="pulse-dot green"></span> Scope 1, 2 &amp; 3 Verified
+            </div>
+          </div>
+          <div class="bento-body">
+            <span class="bento-tag">Sustainability</span>
+            <h3>Carbon Footprint Tracking</h3>
+            <p>Scope 1, 2 and 3 emissions calculated automatically across your entire logistics network.</p>
+            <a href="404.html" class="bento-btn">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5: WHY NEXCHAIN
+═══════════════════════════════════════ -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eye">WHY NEXCHAIN</span>
+      <h2 class="section-title">Considered from procurement to delivery</h2>
+      <p class="section-sub">A premium supply chain platform built around trust, speed and scale.</p>
+    </div>
+    <div class="why-grid">
+      <div class="feat-card reveal stagger-1">
+        <div class="feat-icon">
+          <span class="material-icons mi">verified</span>
+        </div>
+        <h4>Verified Integrations</h4>
+        <p>200+ certified connectors for SAP, Oracle, NetSuite, WMS and TMS — personally vetted by our engineering team.</p>
+      </div>
+      <div class="feat-card reveal stagger-2">
+        <div class="feat-icon">
+          <span class="material-icons mi">auto_awesome</span>
+        </div>
+        <h4>Personalized Intelligence</h4>
+        <p>AI recommendations tuned to your industry, SKU mix and seasonal patterns — not generic playbooks.</p>
+      </div>
+      <div class="feat-card reveal stagger-3">
+        <div class="feat-icon">
+          <span class="material-icons mi">bolt</span>
+        </div>
+        <h4>Rapid Deployment</h4>
+        <p>Go live in 48 hours for a pilot. Full enterprise rollout in 4–8 weeks with white-glove onboarding.</p>
+      </div>
+      <div class="feat-card reveal stagger-4">
+        <div class="feat-icon">
+          <span class="material-icons mi">public</span>
+        </div>
+        <h4>180+ Countries</h4>
+        <p>One platform. Every major shipping lane, port authority, and distribution hub on the planet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 6: STATS STRIP
+═══════════════════════════════════════ -->
+<section class="stats-strip" id="stats">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-item reveal stagger-1">
+        <div class="stat-val">
+          <span class="stat-n" data-count="2400" id="cnt1">2400</span>
+          <span class="stat-suf">+</span>
+        </div>
+        <p class="stat-l">Enterprise customers</p>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-item reveal stagger-2">
+        <div class="stat-val">
+          <span class="stat-n" data-count="97" id="cnt2">97</span>
+          <span class="stat-suf">%</span>
+        </div>
+        <p class="stat-l">Forecast accuracy</p>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-item reveal stagger-3">
+        <div class="stat-val">
+          <span class="stat-n" data-count="180" id="cnt3">180</span>
+          <span class="stat-suf">+</span>
+        </div>
+        <p class="stat-l">Countries covered</p>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat-item reveal stagger-4">
+        <div class="stat-val">
+          <span class="stat-n" data-count="34" id="cnt4">34</span>
+          <span class="stat-suf">%</span>
+        </div>
+        <p class="stat-l">Average cost reduction</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 7: PROCESS STEPS
+═══════════════════════════════════════ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-eye">HOW IT WORKS</span>
+      <h2 class="section-title">From pilot to production in weeks</h2>
+      <p class="section-sub" style="margin:0 auto">Our proven onboarding process de-risks every deployment.</p>
+    </div>
+    <div class="process-steps" id="processSteps">
+      <div class="process-line"><div class="process-line-fill" id="processLineFill"></div></div>
+      <div class="process-step active reveal stagger-1">
+        <div class="step-circle"><div class="step-circle-inner">01</div></div>
+        <div class="step-body">
+          <h4>Discovery & Audit</h4>
+          <p>We map every node in your existing supply chain — systems, carriers, warehouses and data flows.</p>
+        </div>
+      </div>
+      <div class="process-step reveal stagger-2">
+        <div class="step-circle"><div class="step-circle-inner">02</div></div>
+        <div class="step-body">
+          <h4>Pilot Integration</h4>
+          <p>A 48-hour sandbox environment mirrors your live data. Zero disruption to your operations.</p>
+        </div>
+      </div>
+      <div class="process-step reveal stagger-3">
+        <div class="step-circle"><div class="step-circle-inner">03</div></div>
+        <div class="step-body">
+          <h4>AI Training</h4>
+          <p>Our models ingest 24 months of historical data, seasonal patterns and external market signals.</p>
+        </div>
+      </div>
+      <div class="process-step reveal stagger-4">
+        <div class="step-circle"><div class="step-circle-inner">04</div></div>
+        <div class="step-body">
+          <h4>Go Live & Scale</h4>
+          <p>Full enterprise rollout with 24/7 white-glove support, SLA guarantees and dedicated success manager.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 8: TESTIMONIALS
+═══════════════════════════════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-eye">TESTIMONIALS</span>
+      <h2 class="section-title">Trusted by supply chain leaders</h2>
+      <p class="section-sub" style="margin:0 auto">Real results from real enterprises across 6 continents.</p>
+    </div>
+    <div class="testi-wrap">
+      <div class="testi-track">
+        <!-- Slide 1 -->
+        <div class="testi-slide active">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>"NexChain's AI forecasting cut our stockouts by 61% in the first quarter. The ROI was visible before the first invoice."</blockquote>
+            <div class="testi-author">
+              <div class="testi-av" style="background:linear-gradient(135deg,#1a2b4a,#4f46e5)">JR</div>
+              <div class="testi-meta">
+                <div class="testi-name">James Richardson</div>
+                <div class="testi-role">VP Supply Chain, GlobalMart Inc.</div>
+              </div>
+              <div class="testi-metric">
+                <span class="metric-n">61%</span>
+                <span class="metric-l">Stockout reduction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="testi-slide">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>"Real-time tracking across 14 carrier networks on one screen — something we spent 3 years trying to build ourselves. NexChain delivered in 6 weeks."</blockquote>
+            <div class="testi-author">
+              <div class="testi-av" style="background:linear-gradient(135deg,#059669,#0d9488)">SK</div>
+              <div class="testi-meta">
+                <div class="testi-name">Sunita Krishnan</div>
+                <div class="testi-role">Chief Operations Officer, AsiaFreight</div>
+              </div>
+              <div class="testi-metric">
+                <span class="metric-n">6 wks</span>
+                <span class="metric-l">Time to value</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="testi-slide">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>"We reduced last-mile costs by 34% in 90 days. The route optimisation AI alone paid for the entire annual subscription."</blockquote>
+            <div class="testi-author">
+              <div class="testi-av" style="background:linear-gradient(135deg,#dc2626,#c2410c)">MH</div>
+              <div class="testi-meta">
+                <div class="testi-name">Marcus Hoffmann</div>
+                <div class="testi-role">Head of Logistics, EuroTrade GmbH</div>
+              </div>
+              <div class="testi-metric">
+                <span class="metric-n">34%</span>
+                <span class="metric-l">Last-mile savings</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <div class="testi-controls">
+        <button class="testi-btn" id="testiPrev">←</button>
+        <div class="testi-dots">
+          <div class="testi-dot active" data-index="0"></div>
+          <div class="testi-dot" data-index="1"></div>
+          <div class="testi-dot" data-index="2"></div>
+        </div>
+        <button class="testi-btn" id="testiNext">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 9: INSIGHTS / BLOG
+═══════════════════════════════════════ -->
+<section class="insights" id="insights">
+  <div class="container">
+    <div class="insights-layout">
+      <div class="insights-left reveal reveal-left">
+        <span class="section-eye">INSIGHTS</span>
+        <h2 class="section-title">Stories from the operations floor</h2>
+        <p>Expert analysis on supply chain trends, technology and strategy from our team of global practitioners.</p>
+        <a href="404.html" class="btn-navy">View all posts →</a>
+      </div>
+      <div class="insights-right">
+        <a class="insight-row reveal" href="blog.html">
+          <div>
+            <div class="ins-date">Aug 5, 2026</div>
+            <div class="ins-cat">AI & ML</div>
+          </div>
+          <div class="ins-title">How AI is eliminating the 'bullwhip effect' in global manufacturing supply chains</div>
+          <div class="ins-arrow">↗</div>
+        </a>
+        <a class="insight-row reveal stagger-1" href="blog.html">
+          <div>
+            <div class="ins-date">Jul 28, 2026</div>
+            <div class="ins-cat">Sustainability</div>
+          </div>
+          <div class="ins-title">Scope 3 emissions: why your Tier-2 suppliers are the hidden climate risk</div>
+          <div class="ins-arrow">↗</div>
+        </a>
+        <a class="insight-row reveal stagger-2" href="blog.html">
+          <div>
+            <div class="ins-date">Jul 18, 2026</div>
+            <div class="ins-cat">Last Mile</div>
+          </div>
+          <div class="ins-title">Route optimisation vs. dynamic repricing: which lever moves the needle in 2026?</div>
+          <div class="ins-arrow">↗</div>
+        </a>
+        <a class="insight-row reveal stagger-3" href="blog.html">
+          <div>
+            <div class="ins-date">Jul 9, 2026</div>
+            <div class="ins-cat">Resilience</div>
+          </div>
+          <div class="ins-title">Building a 'black swan' resilience playbook: lessons from 3 years of disruption data</div>
+          <div class="ins-arrow">↗</div>
+        </a>
+        <a class="insight-row reveal stagger-4" href="blog.html">
+          <div>
+            <div class="ins-date">Jun 30, 2026</div>
+            <div class="ins-cat">Technology</div>
+          </div>
+          <div class="ins-title">Digital twins in logistics: from expensive experiments to ROI-positive deployments</div>
+          <div class="ins-arrow">↗</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 10A: CTA
+═══════════════════════════════════════ -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner reveal">
+    <span class="section-eye light" style="margin-bottom:14px;display:block">GET STARTED</span>
+    <h2>Ready to transform your supply chain?</h2>
+    <p>Join 2,400+ enterprises already running smarter with NexChain's AI platform.</p>
+    <div class="cta-form">
+      <input type="email" class="cta-input" id="ctaEmail" placeholder="Your work email address…"/>
+      <button class="cta-submit" id="ctaSubmit">Request Access</button>
+    </div>
+    <div class="cta-trust">
+      <span>🔒 SOC 2 Type II certified</span>
+      <span>✓ No credit card required</span>
+      <span>✓ 14-day free pilot</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 10B: FAQ
+═══════════════════════════════════════ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know before getting started.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">How long does the initial setup take? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most clients are live in a sandbox environment within 48 hours of signing. Full enterprise production deployment typically takes 4–8 weeks depending on the number of ERP and WMS integrations required.</p></div>
+      </div>
+      <div class="faq-item reveal stagger-1">
+        <button class="faq-q">Do you integrate with SAP and Oracle? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes — NexChain has certified, pre-built connectors for SAP S/4HANA, SAP ECC, Oracle SCM Cloud, Oracle EBS, and 200+ other enterprise systems including most TMS, WMS and MES platforms.</p></div>
+      </div>
+      <div class="faq-item reveal stagger-2">
+        <button class="faq-q">Is our data secure? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>NexChain is SOC 2 Type II certified, ISO 27001 compliant, and GDPR-ready. All data is encrypted at rest (AES-256) and in transit (TLS 1.3). We offer single-tenant cloud or on-premise deployment options.</p></div>
+      </div>
+      <div class="faq-item reveal stagger-3">
+        <button class="faq-q">What's the pricing model? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Pricing is based on transaction volume and the number of active modules. Most mid-market clients start at $3,500/month. Enterprise agreements include unlimited users, custom SLAs and dedicated support. See our <a href="services.html" style="color:var(--gold)">Services page</a> for details.</p></div>
+      </div>
+      <div class="faq-item reveal stagger-4">
+        <button class="faq-q">Do you offer a free trial? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes — every new client gets a 14-day fully functional pilot on their own data at no charge. No credit card required. Just request access above and our team will reach out within one business day.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="10" fill="#1a2b4a" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        STACKLY
+      </div>
+      <p>Intelligent supply chain orchestration for the modern enterprise. Trusted by 2,400+ companies across 180 countries.</p>
+      <div class="footer-nl">
+        <input type="email" placeholder="Your email…" id="newsletterEmail"/>
+        <button id="newsletterBtn">Subscribe</button>
+      </div>
+      <div class="footer-social">
+        <a class="fsoc" href="404.html" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.54a29 29 0 0 0 .46 5.12 2.78 2.78 0 0 0 1.95 1.96C5.12 19.08 12 19.08 12 19.08s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96 29 29 0 0 0 .46-5.12 29 29 0 0 0-.46-5.12z"></path><polygon points="9.75 15.02 15.5 11.54 9.75 8.06 9.75 15.02" fill="currentColor"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Quick Links column -->
+    <div class="fl-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Register</a></li>
+        <li><a href="contact.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <div class="fl-col">
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="services.html">AI Forecasting</a></li>
+          <li><a href="services.html">Real-Time Tracking</a></li>
+          <li><a href="services.html">Warehouse Automation</a></li>
+          <li><a href="services.html">Compliance Engine</a></li>
+          <li><a href="services.html">Last-Mile Delivery</a></li>
+        </ul>
+      </div>
+      <div class="fl-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Careers</a></li>
+          <li><a href="contact.html">Press</a></li>
+          <li><a href="contact.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="fl-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="#">Status Page</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.08)">
+    <div class="footer-bottom container">
+      <p>© 2026 NexChain Technologies Ltd. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/shared.js"></script>
+<script>
+/* ── HOME-SPECIFIC JS ── */
+
+/* Particle canvas */
+(function(){
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+  for (let i = 0; i < 55; i++) {
+    particles.push({
+      x: Math.random() * W, y: Math.random() * H,
+      r: Math.random() * 1.5 + 0.4,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      o: Math.random() * 0.35 + 0.08
+    });
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0) p.x = W;
+      if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H;
+      if (p.y > H) p.y = 0;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${p.o})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* Typing effect */
+(function(){
+  const phrases = ['Our Priority','Your Advantage','The Future'];
+  const el = document.getElementById('typedText');
+  if (!el) return;
+  let pi = 0, ci = 0, deleting = false;
+  function type() {
+    const phrase = phrases[pi % phrases.length];
+    if (!deleting) {
+      el.textContent = phrase.substring(0, ci + 1);
+      ci++;
+      if (ci === phrase.length) { deleting = true; setTimeout(type, 2200); return; }
+    } else {
+      el.textContent = phrase.substring(0, ci - 1);
+      ci--;
+      if (ci === 0) { deleting = false; pi++; }
+    }
+    setTimeout(type, deleting ? 55 : 90);
+  }
+  setTimeout(type, 1800);
+})();
+
+/* Search button */
+document.getElementById('searchBtn')?.addEventListener('click', () => {
+  document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' });
+});
+
+/* Sol card favourites */
+document.querySelectorAll('.sol-fav').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const active = btn.classList.toggle('active');
+    btn.textContent = active ? '★' : '☆';
+  });
+});
+
+/* Testimonial slider */
+let currentSlide = 0;
+const slides = document.querySelectorAll('.testi-slide');
+const dots = document.querySelectorAll('.testi-dot');
+function goTo(idx) {
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide]?.classList.remove('active');
+  currentSlide = ((idx % slides.length) + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide]?.classList.add('active');
+}
+document.getElementById('testiPrev')?.addEventListener('click', () => goTo(currentSlide - 1));
+document.getElementById('testiNext')?.addEventListener('click', () => goTo(currentSlide + 1));
+dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.index)));
+setInterval(() => goTo(currentSlide + 1), 6500);
+
+/* Process line draw on scroll */
+(function(){
+  const fill = document.getElementById('processLineFill');
+  if (!fill) return;
+  const obs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      fill.classList.add('active');
+      obs.disconnect();
+    }
+  }, { threshold: 0.4 });
+  const section = document.getElementById('process');
+  if (section) obs.observe(section);
+})();
+
+/* CTA form */
+document.getElementById('ctaSubmit')?.addEventListener('click', () => {
+  const inp = document.getElementById('ctaEmail');
+  if (inp?.value.includes('@')) {
+    const btn = document.getElementById('ctaSubmit');
+    btn.textContent = '✓ Request Sent!';
+    btn.style.background = '#10b981';
+    setTimeout(() => { btn.textContent = 'Request Access'; btn.style.background = ''; inp.value = ''; }, 3500);
+  }
+});
+</script>
+</body>
+</html>

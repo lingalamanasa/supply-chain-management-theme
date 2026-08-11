@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1200"/>
+  <title>Login — STACKLY Supply Chain Platform</title>
+  <meta name="description" content="Login to your Stackly supply chain management account."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/auth.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body class="auth-page auth-page-login">
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" id="navLogo">
+      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="#1a2b4a"/>
+        <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav-logo-text">STACKLY</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="services.html"class="nav-link">Services</a>
+      <a href="blog.html"    class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="register.html" class="nav-register">Sign up</a>
+      <a href="login.html"    class="nav-login-btn active">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="register.html">Sign up</a></li>
+    <li><a href="login.html">Login</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════
+     LOGIN MAIN CONTAINER
+═══════════════════════════════════════ -->
+<main class="auth-container">
+  <!-- Left Side: Hero Content -->
+  <div class="auth-hero reveal reveal-left">
+    <span class="auth-eyebrow">WELCOME BACK</span>
+    <h1 class="auth-title">Begin an extraordinary journey</h1>
+    <p class="auth-desc">
+      Login to your account to continue managing global supply chains, accessing real-time telemetry, and optimizing node operations.
+    </p>
+    <div class="auth-stats-row">
+      <span class="auth-stat-pill">240+ ERP integrations</span>
+      <span class="auth-stat-pill">180+ global carriers</span>
+      <span class="auth-stat-pill">99.9% avg uptime</span>
+    </div>
+  </div>
+
+  <!-- Right Side: Glassmorphic Form Card -->
+  <div class="auth-card-wrap reveal reveal-right">
+    <div class="auth-card">
+      <form id="loginForm">
+        
+        <!-- EMAIL -->
+        <div class="auth-field">
+          <label class="auth-label" for="loginEmail">
+            <span class="material-icons">email</span> EMAIL
+          </label>
+          <div class="auth-input-wrap">
+            <input type="email" id="loginEmail" class="auth-input" placeholder="you@stackly.com" required/>
+          </div>
+        </div>
+
+        <!-- USERNAME (OPTIONAL) -->
+        <div class="auth-field">
+          <label class="auth-label" for="loginUsername">
+            <span class="material-icons">person</span> USERNAME (OPTIONAL)
+          </label>
+          <div class="auth-input-wrap">
+            <input type="text" id="loginUsername" class="auth-input" placeholder="NAME"/>
+          </div>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="auth-field">
+          <label class="auth-label" for="loginPassword">
+            <span class="material-icons">lock</span> PASSWORD
+          </label>
+          <div class="auth-input-wrap">
+            <input type="password" id="loginPassword" class="auth-input" placeholder="At least 8 characters" required/>
+            <span class="material-icons password-toggle" onclick="togglePasswordVisibility('loginPassword', this)">visibility</span>
+          </div>
+          <div class="auth-forgot">
+            <a href="#">Forgot password?</a>
+          </div>
+        </div>
+
+        <!-- ROLE -->
+        <div class="auth-field">
+          <label class="auth-label" for="loginRole">
+            <span class="material-icons">group</span> ROLE
+          </label>
+          <div class="auth-input-wrap">
+            <select id="loginRole" class="auth-select" required>
+              <option value="" disabled selected>Select your role</option>
+              <option value="manager">Supply Chain Manager</option>
+              <option value="logistics">Logistics Director</option>
+              <option value="warehouse">Warehouse Admin</option>
+              <option value="executive">Enterprise Executive</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="auth-btn">
+          Login →
+        </button>
+
+        <!-- Footer link -->
+        <div class="auth-footer-text">
+          Don't have an account? <a href="register.html">Sign up</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>
+
+<script src="js/shared.js"></script>
+<script>
+  function togglePasswordVisibility(inputId, iconEl) {
+    const input = document.getElementById(inputId);
+    if (input.type === 'password') {
+      input.type = 'text';
+      iconEl.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      iconEl.textContent = 'visibility';
+    }
+  }
+
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const username = document.getElementById('loginUsername').value || 'Manasasrinivas_Lingala';
+    const role = document.getElementById('loginRole').value;
+    
+    // Save to localStorage
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userUsername', username);
+    localStorage.setItem('userRole', role);
+    
+    // Redirect to dashboard
+    window.location.href = 'dashboard.html';
+  });
+</script>
+</body>
+</html>

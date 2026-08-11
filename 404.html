@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1200"/>
+  <title>404 — Route Disrupted | STACKLY</title>
+  <meta name="description" content="Route Disrupted. Page not found."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/404.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body class="error-page">
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" id="navLogo">
+      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="#1a2b4a"/>
+        <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav-logo-text">STACKLY</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="services.html"class="nav-link">Services</a>
+      <a href="blog.html"    class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="register.html" class="nav-register">Sign up</a>
+      <a href="login.html"    class="nav-login-btn">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="register.html">Sign up</a></li>
+    <li><a href="login.html">Login</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════
+     404 CONTENT CONTAINER
+═══════════════════════════════════════ -->
+<main class="error-container">
+  <div class="error-card reveal">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Route Disruption Detected</h1>
+    <p class="error-desc">
+      The logistics node or page you are requesting does not exist, has been decommissioned, or was dynamically rerouted to a secure origin.
+    </p>
+    <div class="error-actions">
+      <a href="index.html" class="btn-error-primary">
+        <span class="material-icons" style="font-size:18px">home</span> Back to Home
+      </a>
+      <a href="dashboard.html" class="btn-error-secondary">
+        <span class="material-icons" style="font-size:18px">dashboard</span> Go to Dashboard
+      </a>
+    </div>
+  </div>
+</main>
+
+<script src="js/shared.js"></script>
+</body>
+</html>

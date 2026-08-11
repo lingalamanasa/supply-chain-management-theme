@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1200"/>
+  <title>Sign Up — STACKLY Supply Chain Platform</title>
+  <meta name="description" content="Create your Stackly supply chain management account."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/auth.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body class="auth-page auth-page-register">
+
+<!-- ═══════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" id="navLogo">
+      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="#1a2b4a"/>
+        <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav-logo-text">STACKLY</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="services.html"class="nav-link">Services</a>
+      <a href="blog.html"    class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="register.html" class="nav-register active">Sign up</a>
+      <a href="login.html"    class="nav-login-btn">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="register.html">Sign up</a></li>
+    <li><a href="login.html">Login</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════
+     REGISTER MAIN CONTAINER
+═══════════════════════════════════════ -->
+<main class="auth-container">
+  <!-- Left Side: Glassmorphic Form Card -->
+  <div class="auth-card-wrap reveal reveal-left">
+    <div class="auth-card">
+      <form id="registerForm">
+        
+        <!-- FIRST NAME -->
+        <div class="auth-field">
+          <label class="auth-label" for="regFirstName">
+            <span class="material-icons">person</span> FIRST NAME
+          </label>
+          <div class="auth-input-wrap">
+            <input type="text" id="regFirstName" class="auth-input" placeholder="Elena" required/>
+          </div>
+        </div>
+
+        <!-- LAST NAME -->
+        <div class="auth-field">
+          <label class="auth-label" for="regLastName">
+            <span class="material-icons">person_outline</span> LAST NAME
+          </label>
+          <div class="auth-input-wrap">
+            <input type="text" id="regLastName" class="auth-input" placeholder="Voss" required/>
+          </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="auth-field">
+          <label class="auth-label" for="regEmail">
+            <span class="material-icons">email</span> EMAIL
+          </label>
+          <div class="auth-input-wrap">
+            <input type="email" id="regEmail" class="auth-input" placeholder="you@stackly.com" required/>
+          </div>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="auth-field">
+          <label class="auth-label" for="regPassword">
+            <span class="material-icons">lock</span> PASSWORD
+          </label>
+          <div class="auth-input-wrap">
+            <input type="password" id="regPassword" class="auth-input" placeholder="At least 8 characters" required/>
+            <span class="material-icons password-toggle" onclick="togglePasswordVisibility('regPassword', this)">visibility</span>
+          </div>
+        </div>
+
+        <!-- ROLE -->
+        <div class="auth-field">
+          <label class="auth-label" for="regRole">
+            <span class="material-icons">group</span> ROLE
+          </label>
+          <div class="auth-input-wrap">
+            <select id="regRole" class="auth-select" required>
+              <option value="" disabled selected>Supply Chain Leader</option>
+              <option value="manager">Supply Chain Manager</option>
+              <option value="logistics">Logistics Director</option>
+              <option value="warehouse">Warehouse Admin</option>
+              <option value="executive">Enterprise Executive</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Checklist Bullets -->
+        <div class="auth-checklist">
+          <div class="auth-check-item">
+            <span class="auth-check-icon">✓</span> Real-time telemetry &amp; predictive risk alerts
+          </div>
+          <div class="auth-check-item">
+            <span class="auth-check-icon">✓</span> Automated WMS &amp; last-mile orchestration
+          </div>
+          <div class="auth-check-item">
+            <span class="auth-check-icon">✓</span> Priority 24/7 enterprise support
+          </div>
+        </div>
+
+        <!-- Terms Agreement Checkbox -->
+        <div class="auth-agree-wrap">
+          <input type="checkbox" id="agreeTerms" required/>
+          <label for="agreeTerms">I agree to Stackly's Terms of Service and Privacy Policy.</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="auth-btn">
+          Create Account →
+        </button>
+
+        <!-- Footer link -->
+        <div class="auth-footer-text">
+          Already have an account? <a href="login.html">Login</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Right Side: Hero Content -->
+  <div class="auth-hero reveal reveal-right">
+    <span class="auth-eyebrow">JOIN STACKLY</span>
+    <h1 class="auth-title">Begin an extraordinary journey</h1>
+    <p class="auth-desc">
+      Create your account to unlock real-time supply chain intelligence, predictive risk alerts, and automated operations.
+    </p>
+    <div class="auth-stats-row">
+      <span class="auth-stat-pill">240+ ERP integrations</span>
+      <span class="auth-stat-pill">180+ global carriers</span>
+      <span class="auth-stat-pill">99.9% avg uptime</span>
+    </div>
+  </div>
+</main>
+
+<script src="js/shared.js"></script>
+<script>
+  function togglePasswordVisibility(inputId, iconEl) {
+    const input = document.getElementById(inputId);
+    if (input.type === 'password') {
+      input.type = 'text';
+      iconEl.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      iconEl.textContent = 'visibility';
+    }
+  }
+
+  document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const firstName = document.getElementById('regFirstName').value;
+    const lastName = document.getElementById('regLastName').value;
+    const email = document.getElementById('regEmail').value;
+    const role = document.getElementById('regRole').value;
+    
+    // Save to localStorage
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userUsername', firstName + ' ' + lastName);
+    localStorage.setItem('userRole', role);
+    
+    // Redirect to dashboard
+    window.location.href = 'dashboard.html';
+  });
+</script>
+</body>
+</html>

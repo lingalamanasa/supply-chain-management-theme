@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1200"/>
+  <title>About Us — NexChain Supply Chain Platform</title>
+  <meta name="description" content="Learn about NexChain's story, mission, global team and values driving the next generation of intelligent supply chain technology."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/about.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="#1a2b4a"/>
+        <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav-logo-text">STACKLY</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"   class="nav-link active">About</a>
+      <a href="services.html"class="nav-link">Services</a>
+      <a href="blog.html"    class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="register.html" class="nav-register">Sign up</a>
+      <a href="login.html" class="nav-login-btn">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="mobile-cta-link">Login →</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — ABOUT HERO
+═══════════════════════════════════════ -->
+<section class="about-hero" id="home">
+  <div class="about-hero-bg" id="aboutHeroBg"></div>
+  <div class="about-hero-overlay"></div>
+  <canvas class="particle-canvas" id="aboutCanvas"></canvas>
+  <div class="about-hero-content">
+    <!-- Left text -->
+    <div class="about-hero-left">
+      <div class="about-hero-eyebrow">
+        <span class="material-icons mi" style="font-size:0.9rem;color:var(--gold-light)">diamond</span>
+        About NexChain · Est. 2013
+      </div>
+      <h1 class="about-hero-title">
+        We make supply<br/>chains <em>smarter</em>
+      </h1>
+      <p class="about-hero-sub">
+        Founded by logistics engineers and AI researchers, NexChain was built to eliminate the fragmentation, blind spots and waste that costs global supply chains $8 trillion a year.
+      </p>
+      <div class="about-hero-btns">
+        <a href="404.html" class="btn-gold">Our Story</a>
+        <a href="404.html" class="btn-outline-white">Work With Us</a>
+      </div>
+    </div>
+    <!-- Right stats card -->
+    <div class="about-hero-right">
+      <div class="about-stat-card">
+        <div class="about-mini-stat">
+          <span class="val" data-count="2400" id="acnt1">2400</span>
+          <div class="lbl">Enterprise Clients</div>
+        </div>
+        <div class="about-mini-stat">
+          <span class="val" data-count="180" id="acnt2">180</span>
+          <div class="lbl">Countries Covered</div>
+        </div>
+        <div class="about-mini-stat">
+          <span class="val" data-count="420" id="acnt3">420</span>
+          <div class="lbl">Team Members</div>
+        </div>
+        <div class="about-mini-stat">
+          <span class="val" data-count="13" id="acnt4">13</span>
+          <div class="lbl">Years of Innovation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — OUR STORY / TIMELINE
+═══════════════════════════════════════ -->
+<section class="story" id="story">
+  <div class="container">
+    <div class="story-layout">
+      <!-- Image -->
+      <div class="story-left reveal reveal-left">
+        <div class="story-img">
+          <img src="images/about_story.webp" alt="NexChain founding team"/>
+          <div class="story-img-badge">
+            2013
+            <span>The beginning</span>
+          </div>
+        </div>
+      </div>
+      <!-- Timeline -->
+      <div class="story-right reveal reveal-right">
+        <span class="section-eye">OUR STORY</span>
+        <h2 class="section-title dark">From a garage to global infrastructure</h2>
+        <p class="section-sub" style="margin-bottom:32px">
+          What started as a visibility tool for a single logistics company grew into the platform powering supply chains on every continent.
+        </p>
+        <div class="timeline">
+          <div class="tl-item active">
+            <div class="tl-left">
+              <div class="tl-dot"></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-year">2013</div>
+              <div class="tl-title">Founded in Singapore</div>
+              <p class="tl-desc">Three logistics engineers quit their jobs to build real-time container tracking. First client: a 40-container shipping company.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-dot"></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-year">2016</div>
+              <div class="tl-title">Series A &amp; AI Labs</div>
+              <p class="tl-desc">$18M raised. Launched our first demand forecasting engine trained on 5 billion shipment records.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-dot"></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-year">2019</div>
+              <div class="tl-title">1,000-Client Milestone</div>
+              <p class="tl-desc">Expanded to Europe and North America. Added warehouse robotics integration and compliance engine.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-dot"></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-year">2023</div>
+              <div class="tl-title">Series D · $220M</div>
+              <p class="tl-desc">Named #1 Supply Chain Platform by Gartner. Launched NexChain Control Tower — unified visibility for every node.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-dot"></div>
+              <div class="tl-line"></div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-year">2026</div>
+              <div class="tl-title">Global Scale · 180+ Countries</div>
+              <p class="tl-desc">2,400 enterprise clients. 420 team members across 12 offices. Processing 40M+ events per day.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — TEAM
+═══════════════════════════════════════ -->
+<section class="team" id="team">
+  <div class="container">
+    <div class="section-header reveal center" style="position:relative;z-index:1">
+      <span class="section-eye light">OUR TEAM</span>
+      <h2 class="section-title white">The people behind the platform</h2>
+      <p class="section-sub light" style="margin:0 auto">World-class engineers, logistics experts and data scientists united by one mission.</p>
+    </div>
+    <div class="team-grid">
+      <!-- Card 1 -->
+      <div class="team-card reveal stagger-1">
+        <div class="team-img team-img-1">
+          <div class="team-overlay">
+            <div class="team-socials">
+              <a class="team-soc" href="#">Li</a>
+              <a class="team-soc" href="#">Tw</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Arjun Mehta</div>
+          <div class="team-role">Co-Founder &amp; CEO</div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="team-card reveal stagger-2">
+        <div class="team-img team-img-2">
+          <div class="team-overlay">
+            <div class="team-socials">
+              <a class="team-soc" href="#">Li</a>
+              <a class="team-soc" href="#">Gh</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Dr. Lena Kovač</div>
+          <div class="team-role">Co-Founder &amp; Chief AI Officer</div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="team-card reveal stagger-3">
+        <div class="team-img team-img-3">
+          <div class="team-overlay">
+            <div class="team-socials">
+              <a class="team-soc" href="#">Li</a>
+              <a class="team-soc" href="#">Tw</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Marcus Okafor</div>
+          <div class="team-role">Chief Technology Officer</div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="team-card reveal stagger-4">
+        <div class="team-img team-img-4">
+          <div class="team-overlay">
+            <div class="team-socials">
+              <a class="team-soc" href="#">Li</a>
+              <a class="team-soc" href="#">Tw</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Yuna Tanaka</div>
+          <div class="team-role">VP Global Operations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — MISSION & VALUES
+═══════════════════════════════════════ -->
+<section class="values" id="values">
+  <div class="container">
+    <div class="section-header reveal center">
+      <span class="section-eye light">MISSION &amp; VALUES</span>
+      <h2 class="section-title white">What drives every decision we make</h2>
+      <p class="section-sub light" style="margin:0 auto">Six principles that guide how we build, partner and grow.</p>
+    </div>
+    <div class="values-grid">
+      <div class="val-card reveal stagger-1">
+        <div class="val-num">01</div>
+        <h4>Radical Transparency</h4>
+        <p>We share our model accuracy scores, uptime history and pricing openly. No hidden fees, no misleading benchmarks.</p>
+      </div>
+      <div class="val-card reveal stagger-2">
+        <div class="val-num">02</div>
+        <h4>Customer Obsession</h4>
+        <p>Every feature ships because a client requested it. Our roadmap is driven entirely by real operational pain, not trend-chasing.</p>
+      </div>
+      <div class="val-card reveal stagger-3">
+        <div class="val-num">03</div>
+        <h4>Engineering Excellence</h4>
+        <p>Our systems process 40M+ events per day with 99.98% uptime. We invest in infrastructure that enterprise clients can depend on.</p>
+      </div>
+      <div class="val-card reveal stagger-1">
+        <div class="val-num">04</div>
+        <h4>Inclusive Growth</h4>
+        <p>We price solutions that work for a 50-person logistics firm and a Fortune 100 corporation — because good tools shouldn't be exclusive.</p>
+      </div>
+      <div class="val-card reveal stagger-2">
+        <div class="val-num">05</div>
+        <h4>Sustainability First</h4>
+        <p>We are carbon-neutral as an organisation and help clients measure and reduce Scope 1, 2 and 3 emissions across their networks.</p>
+      </div>
+      <div class="val-card reveal stagger-3">
+        <div class="val-num">06</div>
+        <h4>Long-Term Thinking</h4>
+        <p>We build for decades, not quarters. Every technology decision is evaluated against 10-year scalability and resilience requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — GLOBAL REACH CTA
+═══════════════════════════════════════ -->
+<section class="global-cta" id="contact">
+  <div class="container">
+    <div class="global-layout">
+      <!-- Left: animated map -->
+      <div class="reveal reveal-left" style="position:relative;height:380px;">
+        <div class="global-map"></div>
+        <!-- Animated pin dots -->
+        <div class="map-dot" style="top:32%;left:8%"></div>
+        <div class="map-dot" style="top:28%;left:46%;animation-delay:0.6s"></div>
+        <div class="map-dot" style="top:22%;left:72%;animation-delay:1.2s"></div>
+        <div class="map-dot" style="top:45%;left:25%;animation-delay:1.8s"></div>
+        <div class="map-dot" style="top:55%;left:60%;animation-delay:2.4s"></div>
+        <div class="map-dot" style="top:65%;left:82%;animation-delay:0.9s"></div>
+        <!-- Office labels overlay -->
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+          <div style="text-align:center;">
+            <div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:800;color:var(--gold)">12</div>
+            <div style="font-size:0.82rem;color:var(--text-sec);font-weight:600">Global Offices</div>
+          </div>
+          <div style="display:flex;gap:24px;margin-top:8px;">
+            <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:var(--navy)">180+</div><div style="font-size:0.72rem;color:var(--text-muted)">Countries</div></div>
+            <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:var(--navy)">40M+</div><div style="font-size:0.72rem;color:var(--text-muted)">Events/day</div></div>
+            <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:var(--navy)">99.98%</div><div style="font-size:0.72rem;color:var(--text-muted)">Uptime</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: form -->
+      <div class="reveal reveal-right">
+        <span class="section-eye">GET IN TOUCH</span>
+        <h2 class="section-title dark">Partner with a global team</h2>
+        <p class="section-sub" style="margin-bottom:28px">Tell us about your supply chain and we'll show you exactly where NexChain can have the biggest impact.</p>
+        <div class="global-form">
+          <input type="text"  placeholder="Full name"/>
+          <input type="email" placeholder="Work email address"/>
+          <input type="text"  placeholder="Company &amp; industry"/>
+          <textarea placeholder="Tell us about your supply chain challenges…"></textarea>
+          <a href="404.html" class="btn-navy" style="width:100%;justify-content:center">Send Message →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="10" fill="#1a2b4a" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        STACKLY
+      </div>
+      <p>Intelligent supply chain orchestration for the modern enterprise.</p>
+      <div class="footer-nl">
+        <input type="email" placeholder="Your email…" id="newsletterEmail"/>
+        <button id="newsletterBtn">Subscribe</button>
+      </div>
+      <div class="footer-social">
+        <a class="fsoc" href="404.html" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.54a29 29 0 0 0 .46 5.12 2.78 2.78 0 0 0 1.95 1.96C5.12 19.08 12 19.08 12 19.08s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96 29 29 0 0 0 .46-5.12 29 29 0 0 0-.46-5.12z"></path><polygon points="9.75 15.02 15.5 11.54 9.75 8.06 9.75 15.02" fill="currentColor"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Quick Links column -->
+    <div class="fl-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Register</a></li>
+        <li><a href="contact.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <div class="fl-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#team">Team</a></li>
+          <li><a href="contact.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="fl-col">
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#solutions">Solutions</a></li>
+          <li><a href="index.html#network">Network</a></li>
+        </ul>
+      </div>
+      <div class="fl-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.08)">
+    <div class="footer-bottom container">
+      <p>© 2026 NexChain Technologies Ltd. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/shared.js"></script>
+<script>
+/* About page particles */
+(function(){
+  const canvas = document.getElementById('aboutCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, pts = [];
+  function resize(){ W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+  window.addEventListener('resize', resize); resize();
+  for(let i=0;i<40;i++) pts.push({ x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25, r:Math.random()*1.2+.3 });
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(255,255,255,0.18)'; ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+  // parallax on bg
+  const bg = document.getElementById('aboutHeroBg');
+  if(bg){ setTimeout(()=>bg.classList.add('loaded'),100); }
+})();
+
+/* Timeline scroll activation */
+(function(){
+  const items = document.querySelectorAll('.tl-item');
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('active'); });
+  },{ threshold:.4 });
+  items.forEach(i=>obs.observe(i));
+})();
+
+/* About counters */
+[{id:'acnt1',target:2400},{id:'acnt2',target:180},{id:'acnt3',target:420},{id:'acnt4',target:13}].forEach(({id,target})=>{
+  const el = document.getElementById(id);
+  if(!el) return;
+  const obs = new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting){
+      let cur=0; const step=target/(1800/16);
+      const t = setInterval(()=>{ cur+=step; if(cur>=target){cur=target;clearInterval(t);} el.textContent=Math.floor(cur)+'+'; },16);
+      obs.disconnect();
+    }
+  },{threshold:.5});
+  obs.observe(el);
+});
+</script>
+</body>
+</html>

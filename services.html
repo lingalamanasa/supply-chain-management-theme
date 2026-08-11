@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1200"/>
+  <title>Services — NexChain Supply Chain Platform</title>
+  <meta name="description" content="Explore NexChain's full suite of supply chain services: AI forecasting, real-time tracking, warehouse automation, compliance, last-mile delivery and more."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/services.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="#1a2b4a"/>
+        <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span class="nav-logo-text">STACKLY</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"   class="nav-link">About</a>
+      <a href="services.html"class="nav-link active">Services</a>
+      <a href="blog.html"    class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="register.html" class="nav-register">Sign up</a>
+      <a href="login.html" class="nav-login-btn">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="mobile-cta-link">Login →</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — VIDEO HERO
+═══════════════════════════════════════ -->
+<section class="srv-hero" id="home">
+  <video class="srv-hero-video" autoplay muted loop playsinline>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+  </video>
+  <div class="srv-hero-overlay"></div>
+  <canvas class="particle-canvas" id="srvCanvas"></canvas>
+  <div class="srv-hero-content container">
+    <span class="section-eye" style="margin-bottom:14px;display:block">OUR SERVICES</span>
+    <h1>Supply chain solutions <em>built to scale</em></h1>
+    <p>Every module in the NexChain platform is engineered for enterprise reliability, powered by AI and backed by a global team of logistics experts.</p>
+    <div class="srv-hero-btns">
+      <a href="404.html" class="btn-gold">Explore Services</a>
+      <a href="404.html" class="btn-outline-white">Talk to Sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 — SERVICES GRID
+═══════════════════════════════════════ -->
+<section class="services-grid-section" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eye">ALL SERVICES</span>
+      <h2 class="section-title">Every capability you need</h2>
+      <p class="section-sub">Six core modules. Unlimited combinations. One unified platform.</p>
+    </div>
+    <!-- Filter tabs -->
+    <div class="filter-tabs reveal">
+      <button class="filter-tab active" data-filter="all">All Services</button>
+      <button class="filter-tab" data-filter="ai">AI &amp; Analytics</button>
+      <button class="filter-tab" data-filter="ops">Operations</button>
+      <button class="filter-tab" data-filter="compliance">Compliance</button>
+      <button class="filter-tab" data-filter="logistics">Logistics</button>
+    </div>
+    <!-- Grid -->
+    <div class="srv-grid">
+      <!-- 1 -->
+      <div class="srv-card reveal stagger-1" data-cat="ai">
+        <div class="srv-card-img srv-img-1">
+          <div class="srv-card-icon-wrap">
+            <span class="material-icons mi">psychology</span>
+          </div>
+        </div>
+        <div class="srv-card-body">
+          <span class="srv-card-tag">AI &amp; ML</span>
+          <h3>AI Demand Forecasting</h3>
+          <p>97.2% forecast accuracy across 240+ ERP integrations. Seasonal, promotional and external market signals fused into a single model.</p>
+          <a href="contact.html" class="srv-card-link">Get started →</a>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="srv-card reveal stagger-2" data-cat="ops">
+        <div class="srv-card-img srv-img-2">
+          <div class="srv-card-icon-wrap">
+            <span class="material-icons mi">location_on</span>
+          </div>
+        </div>
+        <div class="srv-card-body">
+          <span class="srv-card-tag">Operations</span>
+          <h3>Real-Time Tracking</h3>
+          <p>Live GPS + IoT telemetry across 180+ carrier networks. Sub-minute refresh, predictive ETA and automatic exception alerts.</p>
+          <a href="contact.html" class="srv-card-link">Get started →</a>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="srv-card reveal stagger-3" data-cat="ops">
+        <div class="srv-card-img srv-img-3">
+          <div class="srv-card-icon-wrap">
+            <span class="material-icons mi">precision_manufacturing</span>
+          </div>
+        </div>
+        <div class="srv-card-body">
+          <span class="srv-card-tag">Operations</span>
+          <h3>Warehouse Automation</h3>
+          <p>Robotics WMS with 99% pick accuracy. Integrates with 80+ AMR, AS/RS and conveyor systems. Zero downtime migration path.</p>
+          <a href="contact.html" class="srv-card-link">Get started →</a>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="srv-card reveal stagger-1" data-cat="ai">
+        <div class="srv-card-img srv-img-4">
+          <div class="srv-card-icon-wrap">
+            <span class="material-icons mi">bar_chart</span>
+          </div>
+        </div>
+        <div class="srv-card-body">
+          <span class="srv-card-tag">Analytics</span>
+          <h3>Supply Chain Analytics</h3>
+          <p>Real-time control tower dashboards with drill-down to SKU level. One-click BI exports to Tableau, Power BI and Looker.</p>
+          <a href="contact.html" class="srv-card-link">Get started →</a>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="srv-card reveal stagger-2" data-cat="compliance">
+        <div class="srv-card-img srv-img-5">
+          <div class="srv-card-icon-wrap">
+            <span class="material-icons mi">gavel</span>
+          </div>
+        </div>
+        <div class="srv-card-body">
+          <span class="srv-card-tag">Compliance</span>
+          <h3>Compliance Engine</h3>
+          <p>ISO 28000, CTPAT, AEO and 180-country customs documentation, automated trade finance and sanctions screening built in.</p>
+          <a href="contact.html" class="srv-card-link">Get started →</a>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="srv-card reveal stagger-3" data-cat="logistics">
+        <div class="srv-card-img srv-img-6">
+          <div class="srv-card-icon-wrap">
+            <span class="material-icons mi">local_shipping</span>
+          </div>
+        </div>
+        <div class="srv-card-body">
+          <span class="srv-card-tag">Logistics</span>
+          <h3>Last-Mile Delivery AI</h3>
+          <p>Dynamic route optimisation, customer communication automation and carrier selection AI. Average 34% cost reduction.</p>
+          <a href="contact.html" class="srv-card-link">Get started →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — HOW IT WORKS
+═══════════════════════════════════════ -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-eye light">HOW IT WORKS</span>
+      <h2 class="section-title white">From contract to value in weeks</h2>
+      <p class="section-sub light" style="margin:0 auto">Our proven deployment process eliminates risk at every step.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step reveal stagger-1">
+        <div class="how-num">01</div>
+        <h4>Discovery Call</h4>
+        <p>We audit your current systems, carriers and data flows in a 90-minute session — at no charge, no commitment.</p>
+      </div>
+      <div class="how-step reveal stagger-2">
+        <div class="how-num">02</div>
+        <h4>Sandbox Pilot</h4>
+        <p>Your live data feeds into a mirrored NexChain environment in 48 hours. Zero disruption to production operations.</p>
+      </div>
+      <div class="how-step reveal stagger-3">
+        <div class="how-num">03</div>
+        <h4>AI Calibration</h4>
+        <p>Our models train on 24 months of your historical data plus global market intelligence signals specific to your industry.</p>
+      </div>
+      <div class="how-step reveal stagger-4">
+        <div class="how-num">04</div>
+        <h4>Go Live &amp; Scale</h4>
+        <p>Full production deployment with 24/7 white-glove support, dedicated success manager and contractual SLA guarantees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 — PRICING
+═══════════════════════════════════════ -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-eye">PRICING</span>
+      <h2 class="section-title">Simple, transparent pricing</h2>
+      <p class="section-sub" style="margin:0 auto">No hidden fees, no per-seat surprises. Priced on value delivered.</p>
+    </div>
+    <div class="pricing-grid">
+      <!-- Starter -->
+      <div class="price-card reveal stagger-1">
+        <div class="price-tier">Starter</div>
+        <div class="price-val"><sup>$</sup>1,200</div>
+        <div class="price-period">per month, billed annually</div>
+        <div class="price-desc">Perfect for logistics teams running a single region or business unit.</div>
+        <div class="price-divider"></div>
+        <div class="price-features">
+          <div class="price-feat">AI Demand Forecasting (1 facility)</div>
+          <div class="price-feat">Real-Time Tracking (up to 50 carriers)</div>
+          <div class="price-feat">Analytics Dashboard</div>
+          <div class="price-feat">Email &amp; chat support</div>
+          <div class="price-feat no">Warehouse Automation</div>
+          <div class="price-feat no">Compliance Engine</div>
+          <div class="price-feat no">Last-Mile AI</div>
+        </div>
+        <a href="contact.html" class="btn-outline" style="width:100%;justify-content:center">Get Started</a>
+      </div>
+      <!-- Professional (popular) -->
+      <div class="price-card popular reveal stagger-2">
+        <div class="popular-badge">Popular</div>
+        <div class="price-tier">Professional</div>
+        <div class="price-val"><sup>$</sup>3,500</div>
+        <div class="price-period">per month, billed annually</div>
+        <div class="price-desc">Full platform access for mid-market companies operating across multiple regions.</div>
+        <div class="price-divider"></div>
+        <div class="price-features">
+          <div class="price-feat">AI Demand Forecasting (unlimited facilities)</div>
+          <div class="price-feat">Real-Time Tracking (180+ carriers)</div>
+          <div class="price-feat">Advanced Analytics + BI Export</div>
+          <div class="price-feat">Warehouse Automation</div>
+          <div class="price-feat">Compliance Engine (180 countries)</div>
+          <div class="price-feat">Last-Mile Delivery AI</div>
+          <div class="price-feat">Dedicated success manager</div>
+        </div>
+        <a href="404.html" class="btn-gold" style="width:100%;justify-content:center">Start Free Trial</a>
+      </div>
+      <!-- Enterprise -->
+      <div class="price-card reveal stagger-3">
+        <div class="price-tier">Enterprise</div>
+        <div class="price-val" style="font-size:2rem">Custom</div>
+        <div class="price-period">tailored to your scale</div>
+        <div class="price-desc">For Fortune 500 companies and complex multi-modal global supply chains.</div>
+        <div class="price-divider"></div>
+        <div class="price-features">
+          <div class="price-feat">Everything in Professional</div>
+          <div class="price-feat">On-premise or private cloud deployment</div>
+          <div class="price-feat">Custom AI model training</div>
+          <div class="price-feat">99.99% SLA guarantee</div>
+          <div class="price-feat">24/7 phone + dedicated engineer</div>
+          <div class="price-feat">Executive business reviews</div>
+          <div class="price-feat">Custom integrations (unlimited)</div>
+        </div>
+        <a href="404.html" class="btn-navy" style="width:100%;justify-content:center">Talk to Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — CTA (floating shapes)
+═══════════════════════════════════════ -->
+<section class="srv-cta" id="cta">
+  <div class="srv-cta-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  <div class="container srv-cta-content">
+    <div class="reveal" style="max-width:640px;margin:0 auto">
+      <span class="section-eye light" style="display:block;margin-bottom:14px">START TODAY</span>
+      <h2>Begin your 14-day free pilot</h2>
+      <p>No credit card required. We'll connect your live data, run the AI models and show you exactly what NexChain delivers — before you pay a cent.</p>
+      <div class="srv-cta-btns">
+        <a href="404.html" class="btn-gold">Request Pilot Access</a>
+        <a href="404.html"   class="btn-outline-white">Learn About Us</a>
+      </div>
+      <div style="margin-top:28px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--gold)">48h</div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.5)">Time to sandbox</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.1)"></div>
+        <div style="text-align:center;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--gold)">14</div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.5)">Day free pilot</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.1)"></div>
+        <div style="text-align:center;">
+          <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--gold)">$0</div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.5)">Upfront cost</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="10" fill="#1a2b4a" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        STACKLY
+      </div>
+      <p>Intelligent supply chain orchestration for the modern enterprise.</p>
+      <div class="footer-nl">
+        <input type="email" placeholder="Your email…" id="newsletterEmail"/>
+        <button id="newsletterBtn">Subscribe</button>
+      </div>
+      <div class="footer-social">
+        <a class="fsoc" href="404.html" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a class="fsoc" href="404.html" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.54a29 29 0 0 0 .46 5.12 2.78 2.78 0 0 0 1.95 1.96C5.12 19.08 12 19.08 12 19.08s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96 29 29 0 0 0 .46-5.12 29 29 0 0 0-.46-5.12z"></path><polygon points="9.75 15.02 15.5 11.54 9.75 8.06 9.75 15.02" fill="currentColor"></polygon></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Quick Links column -->
+    <div class="fl-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Register</a></li>
+        <li><a href="contact.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <div class="fl-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html">AI Forecasting</a></li>
+          <li><a href="services.html">Tracking</a></li>
+          <li><a href="services.html">Automation</a></li>
+          <li><a href="services.html">Compliance</a></li>
+        </ul>
+      </div>
+      <div class="fl-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fl-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.08)">
+    <div class="footer-bottom container">
+      <p>© 2026 NexChain Technologies Ltd. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/shared.js"></script>
+<script>
+/* Services page particle canvas */
+(function(){
+  const canvas = document.getElementById('srvCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, pts=[];
+  function resize(){ W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight; }
+  window.addEventListener('resize',resize); resize();
+  for(let i=0;i<50;i++) pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.4+.4});
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H; if(p.y>H)p.y=0;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(255,255,255,0.15)'; ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* Filter tabs */
+document.querySelectorAll('.filter-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const filter = tab.dataset.filter;
+    document.querySelectorAll('.srv-card').forEach(card=>{
+      const cat = card.dataset.cat;
+      card.style.opacity = (filter==='all' || cat===filter) ? '1' : '0.25';
+      card.style.transform = (filter==='all' || cat===filter) ? '' : 'scale(0.97)';
+    });
+  });
+});
+
+/* Pricing card hover glow */
+document.querySelectorAll('.price-card').forEach(card=>{
+  card.addEventListener('mouseenter',()=>{
+    if(!card.classList.contains('popular'))
+      card.style.borderColor='rgba(26,43,74,0.25)';
+  });
+  card.addEventListener('mouseleave',()=>{
+    if(!card.classList.contains('popular'))
+      card.style.borderColor='';
+  });
+});
+</script>
+</body>
+</html>

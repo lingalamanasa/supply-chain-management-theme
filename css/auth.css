@@ -1,0 +1,272 @@
+/* =====================================================
+   NexChain — Auth Pages Styling (Login & Register)
+   Stackly exact visual match · Glassmorphism & Pill UI
+   ===================================================== */
+
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  min-width: 1200px;
+}
+
+.auth-page-login {
+  background: 
+    linear-gradient(to right, rgba(10, 22, 40, 0.88), rgba(10, 22, 40, 0.65)),
+    url('../images/hero_poster.webp');
+}
+
+.auth-page-register {
+  background: 
+    linear-gradient(to right, rgba(10, 22, 40, 0.65), rgba(10, 22, 40, 0.88)),
+    url('../images/about_hero.webp');
+}
+
+.auth-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 110px auto 50px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex: 1;
+  z-index: 2;
+}
+
+/* ── Content Side ── */
+.auth-hero {
+  flex: 1;
+  max-width: 540px;
+}
+
+.auth-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.auth-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  line-height: 1.12;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.auth-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 36px;
+}
+
+.auth-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.auth-stat-pill {
+  padding: 9px 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* ── Form Card ── */
+.auth-card-wrap {
+  flex: 1;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  background: rgba(22, 34, 48, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-radius: 28px;
+  padding: 36px 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.auth-field {
+  margin-bottom: 18px;
+}
+
+.auth-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.auth-label .material-icons {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.auth-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-input,
+.auth-select {
+  width: 100%;
+  padding: 13px 20px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 0.88rem;
+  transition: var(--trans);
+}
+
+.auth-select option {
+  background: #0f1c31;
+  color: #ffffff;
+}
+
+.auth-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.auth-input:focus,
+.auth-select:focus {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.12);
+}
+
+.password-toggle {
+  position: absolute;
+  right: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.password-toggle:hover {
+  color: #ffffff;
+}
+
+.auth-forgot {
+  text-align: right;
+  margin-top: 6px;
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.auth-forgot a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 22px;
+  background: #ffffff;
+  color: #0f1c31;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--trans);
+  cursor: pointer;
+}
+
+.auth-btn:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+}
+
+.auth-footer-text {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.auth-footer-text a {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.auth-footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* ── Register Specific Checklist & Checkbox ── */
+.auth-checklist {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.auth-check-icon {
+  color: #10b981;
+  font-weight: 800;
+  font-size: 0.88rem;
+}
+
+.auth-agree-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.auth-agree-wrap input[type="checkbox"] {
+  accent-color: var(--gold);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/* Responsive */
+
