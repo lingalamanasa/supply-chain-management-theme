@@ -11,8 +11,7 @@
   color: #ffffff;
   font-family: 'Plus Jakarta Sans', sans-serif;
   position: relative;
-  overflow-x: auto;
-  min-width: 1200px;
+  overflow-x: hidden;
 }
 
 /* Background grid overlay */
@@ -135,9 +134,26 @@
   cursor: pointer;
 }
 
-.btn-error-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
+@media (max-width: 768px) {
+  .error-card {
+    padding: 36px 20px;
+    margin: 0 16px;
+  }
+  .error-code {
+    font-size: 5rem;
+  }
+  .error-title {
+    font-size: 1.6rem;
+  }
+  .error-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-error-primary, .btn-error-secondary {
+    width: 100%;
+    justify-content: center;
+  }
 }
+
 
 

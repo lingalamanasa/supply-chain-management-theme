@@ -12,9 +12,8 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background: #f0f2f5;
   color: #1a2b4a;
-  overflow-x: auto;
+  overflow-x: hidden;
   line-height: 1.65;
-  min-width: 1200px;
 }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
@@ -662,3 +661,50 @@ input, textarea, select { border: none; outline: none; font: inherit; }
 
 .anim-float  { animation: float 4s ease-in-out infinite; }
 .anim-fadeup { animation: fadeUp 0.8s ease forwards; }
+
+/* ════════════════════════════════════════
+   MOBILE RESPONSIVE — ≤768px
+════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .nav-container { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-actions { display: none; }
+  .hamburger { display: flex; }
+
+  /* Container */
+  .container { padding: 0 20px; }
+  .section { padding: 64px 0; }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-bottom-links { justify-content: center; }
+
+  /* Shared feature/service grid */
+  .feat-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Section headers */
+  .section-tag { font-size: 0.65rem; }
+  .section-header h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+
+  /* Reveal animations — disable translate on small screens */
+  .reveal, .reveal-left, .reveal-right {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .reveal.visible, .reveal-left.visible, .reveal-right.visible {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

@@ -12,8 +12,7 @@
   background-repeat: no-repeat !important;
   display: flex;
   flex-direction: column;
-  overflow-x: auto;
-  min-width: 1200px;
+  overflow-x: hidden;
 }
 
 .auth-page-login {
@@ -269,4 +268,29 @@
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    margin: 90px auto 40px;
+    gap: 36px;
+    padding: 0 20px;
+  }
+  .auth-hero {
+    max-width: 100%;
+    text-align: center;
+  }
+  .auth-title {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+  .auth-stats-row {
+    justify-content: center;
+  }
+  .auth-card-wrap {
+    max-width: 100%;
+  }
+  .auth-card {
+    padding: 28px 20px;
+  }
+}
+
 

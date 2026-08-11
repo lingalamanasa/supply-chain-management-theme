@@ -726,4 +726,76 @@
 .faq-header p { font-size: 0.9rem; color: var(--text-sec); }
 .faq-list { max-width: 760px; margin: 0 auto; }
 
+/* ════════════════════════════════════════
+   HOME — MOBILE RESPONSIVE ≤768px
+════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero { min-height: 90vh; padding-top: calc(var(--nav-h) + 20px); }
+  .hero-content { padding: 0 20px; }
+  .hero-content h1 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+  .hero-content p { font-size: 0.9rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-actions a, .hero-actions button { text-align: center; }
+
+  /* Stats */
+  .stats { padding: 40px 0; }
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  /* Bento grid */
+  .bento-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  .bento-card { grid-column: 1 !important; grid-row: auto !important; }
+  .bento-img-half { height: 200px !important; }
+
+  /* Trusted logos / partners */
+  .partners-track { gap: 28px; }
+  .partner-item img { height: 28px; }
+
+  /* Services preview grid */
+  .services-preview-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* World map / offices */
+  .offices-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  .world-map-wrap { display: none; }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  /* Blog preview */
+  .blog-preview-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* CTA section */
+  .cta-inner { padding: 48px 20px; }
+  .cta-inner h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .cta-form { flex-direction: column; gap: 12px; }
+  .cta-input { border-radius: 12px; }
+  .cta-submit { border-radius: 12px; width: 100%; }
+  .cta-trust { flex-direction: column; gap: 10px; align-items: center; }
+
+  /* FAQ */
+  .faq { padding: 60px 0; }
+  .faq-list { padding: 0 20px; }
+}
+
+
 
