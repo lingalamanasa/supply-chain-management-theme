@@ -494,7 +494,8 @@
 /* ── 5. WHY NEXCHAIN ── */
 .why {
   padding: 100px 0;
-  background: var(--bg-white);
+  background: var(--navy-dark);
+  color: white;
 }
 .why-grid {
   display: grid;
@@ -507,7 +508,8 @@
 /* ── 7. PROCESS STEPS ── */
 .process {
   padding: 100px 0;
-  background: var(--bg);
+  background: var(--navy-dark);
+  color: white;
   position: relative;
 }
 .process-steps {
@@ -716,7 +718,7 @@
   flex-wrap: wrap;
 }
 /* FAQ */
-.faq { padding: 100px 0; background: var(--bg-white); }
+.faq { padding: 100px 0; background: var(--navy-dark); color: white; }
 .faq-header { text-align: center; margin-bottom: 48px; }
 .faq-header h2 {
   font-family: 'Playfair Display', serif;
