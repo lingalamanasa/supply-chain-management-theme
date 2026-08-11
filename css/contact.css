@@ -254,7 +254,7 @@
     gap: 16px;
   }
 
-  .offices-cards-grid {
+  .offices-grid {
     grid-template-columns: 1fr !important;
     gap: 20px;
     padding: 0 20px;
