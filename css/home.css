@@ -888,6 +888,27 @@
   /* FAQ */
   .faq { padding: 60px 0; }
   .faq-list { padding: 0; width: 100% !important; }
+
+  /* Insights */
+  .insights { padding: 60px 0; }
+  .insights-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .insights-left {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+  }
+  .insights-left .section-title { font-size: 1.8rem; }
+  .insight-row {
+    grid-template-columns: 80px 1fr 20px !important;
+    gap: 16px !important;
+    padding: 16px 0;
+  }
 }
 
 

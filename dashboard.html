@@ -605,7 +605,11 @@
       { id: 'NX-8820', cargo: 'Lithium Cell Batteries', carrier: 'Maersk Line', route: 'SIN → RTM', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'Cargo temp: 18.2°C (Optimal) · Lat/Lon: 1.352, 103.819 · Speed: 21 knots' },
       { id: 'NX-1149', cargo: 'Critical Medical Supplies', carrier: 'DHL Express', route: 'FRA → LHR', status: 'Delayed', statusClass: 'delayed', badgeStyle: 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)', details: 'Held at customs clearance point · Current hold time: 4.5 hours · Temp: 4.0°C' },
       { id: 'NX-4820', cargo: 'Aluminium Chassis Frames', carrier: 'FedEx Trucking', route: 'CHI → DET', status: 'Delivered', statusClass: 'delivered', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)', details: 'Signature confirmation received · Delivered at Chicago Dock 4 · Weight: 12,400 kg' },
-      { id: 'NX-7721', cargo: 'Semiconductor Wafers', carrier: 'FedEx Air', route: 'TPE → LAX', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'In flight (FX802) · Altitude: 34,000 ft · Climate-controlled vault: Active' }
+      { id: 'NX-7721', cargo: 'Semiconductor Wafers', carrier: 'FedEx Air', route: 'TPE → LAX', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'In flight (FX802) · Altitude: 34,000 ft · Climate-controlled vault: Active' },
+      { id: 'NX-3042', cargo: 'Industrial Robotics Parts', carrier: 'UPS Supply Chain', route: 'NRT → YVR', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'Arriving at port · ETA: 2 hours · Customs pre-cleared' },
+      { id: 'NX-9102', cargo: 'Cold Chain Pharmaceuticals', carrier: 'Kuehne+Nagel', route: 'BOM → DXB', status: 'Delayed', statusClass: 'delayed', badgeStyle: 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)', details: 'Awaiting temperature logs · Held in quarantine zone · Temp: 2.1°C' },
+      { id: 'NX-5529', cargo: 'Apparel & Textiles', carrier: 'MSC Shipping', route: 'SGN → LAX', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'Ocean Transit · Speed: 18 knots · Next port call: Honolulu' },
+      { id: 'NX-1093', cargo: 'Consumer Electronics', carrier: 'DHL Global Forwarding', route: 'HKG → FRA', status: 'Delivered', statusClass: 'delivered', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)', details: 'Unloaded at Gate 12 · Inventory reconciled without issues' }
     ];
 
     const shipmentsGridEl = document.getElementById('shipmentsGrid');
@@ -664,7 +668,11 @@
       { name: 'Rotterdam Terminal (RTM)', type: 'Seaport Hub', capacity: 78, health: 98, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
       { name: 'Singapore Changi Cargo (SIN)', type: 'Air Cargo Hub', capacity: 62, health: 99, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
       { name: 'Chicago Distribution Center (CHI)', type: 'Warehouse Hub', capacity: 92, health: 85, status: 'High Load', badgeStyle: 'background:rgba(184,134,11,0.12);color:#b8860b;border:1px solid rgba(184,134,11,0.3)' },
-      { name: 'London Heathrow Terminal (LHR)', type: 'Customs Terminal', capacity: 45, health: 94, status: 'Congested', badgeStyle: 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' }
+      { name: 'London Heathrow Terminal (LHR)', type: 'Customs Terminal', capacity: 45, health: 94, status: 'Congested', badgeStyle: 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' },
+      { name: 'Dubai Logistics City (DWC)', type: 'Air & Sea Hub', capacity: 81, health: 96, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
+      { name: 'Los Angeles Port (LAX)', type: 'Seaport Hub', capacity: 96, health: 78, status: 'High Load', badgeStyle: 'background:rgba(184,134,11,0.12);color:#b8860b;border:1px solid rgba(184,134,11,0.3)' },
+      { name: 'Frankfurt Airport Cargo (FRA)', type: 'Air Cargo Hub', capacity: 55, health: 99, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
+      { name: 'Shanghai Yangshan Port (PVG)', type: 'Deep Water Port', capacity: 88, health: 91, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' }
     ];
 
     const hubsGridEl = document.getElementById('hubsGrid');
