@@ -732,28 +732,85 @@
 @media (max-width: 768px) {
 
   /* Hero */
-  .hero { min-height: 90vh; padding-top: calc(var(--nav-h) + 20px); }
-  .hero-content { padding: 0 20px; }
-  .hero-content h1 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
-  .hero-content p { font-size: 0.9rem; }
+  .hero { min-height: 85vh; padding-top: calc(var(--nav-h) + 30px); padding-bottom: 40px; }
+  .hero-content { padding: 0 16px; }
+  .hero-title { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 16px; }
+  .hero-sub { font-size: 0.95rem; margin-bottom: 24px; padding: 0 10px; }
   .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
   .hero-actions a, .hero-actions button { text-align: center; }
+
+  /* Hero Search Bar */
+  .hero-search {
+    flex-direction: column;
+    border-radius: 18px;
+    max-width: 100%;
+    margin-bottom: 24px;
+    background: #ffffff;
+  }
+  .search-field {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 18px;
+  }
+  .search-field:last-of-type { border-bottom: none; }
+  .search-field input { font-size: 0.9rem; }
+  .search-btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 0 0 18px 18px;
+    font-size: 1.1rem;
+  }
+
+  /* Social proof & scroll cue */
+  .hero-proof { margin-top: 10px; }
+  .hero-scroll { display: none; }
 
   /* Stats */
   .stats { padding: 40px 0; }
   .stats-row {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 0 20px;
+    padding: 0 16px;
+  }
+
+  /* Solutions 3D Flip Cards Grid */
+  .solutions { padding: 60px 0; }
+  .solutions-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 0 16px;
+  }
+  .flip-card {
+    height: 280px;
   }
 
   /* Bento grid */
+  .bento-section { padding: 60px 0; }
   .bento-grid {
     grid-template-columns: 1fr !important;
     grid-template-rows: auto !important;
+    gap: 20px;
+    padding: 0 16px;
   }
   .bento-card { grid-column: 1 !important; grid-row: auto !important; }
   .bento-img-half { height: 200px !important; }
+
+  /* Why Nexchain grid */
+  .why { padding: 60px 0; }
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  /* Process steps grid */
+  .process { padding: 60px 0; }
+  .process-steps {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 0 16px;
+  }
+  .process-line { display: none; }
 
   /* Trusted logos / partners */
   .partners-track { gap: 28px; }
@@ -763,12 +820,14 @@
   .services-preview-grid {
     grid-template-columns: 1fr !important;
     gap: 20px;
+    padding: 0 16px;
   }
 
   /* World map / offices */
   .offices-grid {
     grid-template-columns: 1fr !important;
     gap: 16px;
+    padding: 0 16px;
   }
   .world-map-wrap { display: none; }
 
@@ -776,12 +835,14 @@
   .testimonials-grid {
     grid-template-columns: 1fr !important;
     gap: 16px;
+    padding: 0 16px;
   }
 
   /* Blog preview */
   .blog-preview-grid {
     grid-template-columns: 1fr !important;
     gap: 20px;
+    padding: 0 16px;
   }
 
   /* CTA section */
@@ -794,8 +855,9 @@
 
   /* FAQ */
   .faq { padding: 60px 0; }
-  .faq-list { padding: 0 20px; }
+  .faq-list { padding: 0 16px; }
 }
+
 
 
 

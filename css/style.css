@@ -174,40 +174,48 @@ input, textarea, select { border: none; outline: none; font: inherit; }
 .mobile-menu {
   position: fixed;
   inset: 0;
-  background: white;
-  z-index: 999;
+  background: rgba(15, 28, 49, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transform: translateY(-100%);
-  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 .mobile-menu.open { transform: translateY(0); }
 .mobile-close {
   position: absolute;
-  top: 22px; right: 26px;
+  top: 24px; right: 24px;
   font-size: 1.5rem;
-  color: var(--text-sec);
+  color: white;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
   cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.2);
 }
-.mobile-menu ul { display: flex; flex-direction: column; gap: 18px; text-align: center; }
+.mobile-menu ul { display: flex; flex-direction: column; gap: 24px; text-align: center; }
 .mobile-menu a {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.9rem;
-  font-weight: 600;
-  color: var(--text-sec);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
   transition: var(--trans);
 }
-.mobile-menu a:hover { color: var(--navy); }
+.mobile-menu a:hover { color: var(--gold-light); }
 .mobile-cta-link {
-  font-size: 1.15rem !important;
-  background: var(--navy) !important;
+  font-size: 1.1rem !important;
+  background: var(--gold) !important;
   color: white !important;
-  padding: 12px 32px !important;
+  padding: 12px 36px !important;
   border-radius: 100px !important;
   font-family: 'Plus Jakarta Sans', sans-serif !important;
   font-weight: 700 !important;
+  margin-top: 10px;
 }
 
 /* ════════════════════════════════════════
@@ -668,14 +676,22 @@ input, textarea, select { border: none; outline: none; font: inherit; }
 @media (max-width: 768px) {
 
   /* Navbar */
-  .nav-container { padding: 0 20px; }
+  .navbar {
+    background: rgba(15, 28, 49, 0.95) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+  }
+  .nav-container { padding: 0 16px; justify-content: space-between; }
   .nav-links { display: none; }
   .nav-actions { display: none; }
-  .hamburger { display: flex; }
+  .hamburger { display: flex; margin-left: 0; }
+  .hamburger span { background: white !important; }
+  .nav-logo-text { color: white !important; }
 
   /* Container */
-  .container { padding: 0 20px; }
-  .section { padding: 64px 0; }
+  .container { padding: 0 16px; }
+  .section { padding: 60px 0; }
 
   /* Footer */
   .footer-grid {
