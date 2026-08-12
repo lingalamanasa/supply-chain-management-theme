@@ -17,6 +17,9 @@
 <!-- ═══ MOBILE STICKY MENUBAR ═══ -->
 <nav class="mob-topbar" aria-label="Mobile Navigation">
   <div class="mob-topbar-header">
+    <button class="mob-hamburger" id="mobHamburger" aria-label="Open Menu">
+      <span></span><span></span><span></span>
+    </button>
     <a href="dashboard.html" class="mob-topbar-brand">
       <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
         <rect width="40" height="40" rx="10" fill="var(--accent-cyan)"/>
@@ -853,5 +856,81 @@
     });
   });
 </script>
+
+<!-- ═══ MOBILE DRAWER MENU ═══ -->
+<div class="mob-drawer-overlay" id="mobOverlay"></div>
+<div class="mob-drawer" id="mobDrawer">
+  <div class="mob-drawer-header">
+    <div class="mob-drawer-brand">
+      <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="var(--accent-cyan)"/>
+        <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
+      </svg>
+      <span>STACKLY</span>
+    </div>
+    <button class="mob-drawer-close" id="mobDrawerClose" aria-label="Close">✕</button>
+  </div>
+  <div class="mob-drawer-sub" id="drawerSubtitle">Supply Chain Dashboard</div>
+  <nav class="mob-drawer-nav">
+    <a href="#" class="mob-drawer-item mob-drawer-active" data-tab="overview">
+      <span class="material-icons">grid_view</span> Overview
+    </a>
+    <a href="#" class="mob-drawer-item" data-tab="shipments">
+      <span class="material-icons">local_shipping</span> My Shipments
+    </a>
+    <a href="#" class="mob-drawer-item" data-tab="hubs">
+      <span class="material-icons">favorite_border</span> Saved Hubs
+    </a>
+    <a href="#" class="mob-drawer-item" data-tab="operations">
+      <span class="material-icons">account_balance_wallet</span> Operations
+    </a>
+    <a href="#" class="mob-drawer-item" data-tab="settings">
+      <span class="material-icons">settings</span> Settings
+    </a>
+  </nav>
+  <div class="mob-drawer-footer">
+    <a href="index.html" class="mob-drawer-logout">
+      <span class="material-icons">logout</span> Logout
+    </a>
+  </div>
+</div>
+
+<script>
+(function() {
+  var hamburger = document.getElementById('mobHamburger');
+  var overlay   = document.getElementById('mobOverlay');
+  var drawer    = document.getElementById('mobDrawer');
+  var closeBtn  = document.getElementById('mobDrawerClose');
+
+  function openDrawer()  { drawer.classList.add('open'); overlay.classList.add('open'); }
+  function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); }
+
+  if (hamburger) hamburger.addEventListener('click', openDrawer);
+  if (closeBtn)  closeBtn.addEventListener('click', closeDrawer);
+  if (overlay)   overlay.addEventListener('click', closeDrawer);
+
+  // Drawer item tab switching
+  document.querySelectorAll('.mob-drawer-item[data-tab]').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      var tabId = item.getAttribute('data-tab');
+      document.querySelectorAll('.mob-drawer-item').forEach(function(i){ i.classList.remove('mob-drawer-active'); });
+      item.classList.add('mob-drawer-active');
+      document.querySelectorAll('.tab-content').forEach(function(c){
+        c.style.display = (c.id === 'tab-' + tabId) ? 'block' : 'none';
+      });
+      // Also sync mob-pill active state
+      document.querySelectorAll('.mob-pill[data-tab]').forEach(function(p){
+        p.classList.toggle('mob-pill-active', p.getAttribute('data-tab') === tabId);
+      });
+      closeDrawer();
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
