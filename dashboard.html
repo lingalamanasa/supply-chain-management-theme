@@ -11,28 +11,44 @@
 </head>
 <body class="dashboard-body">
 
-<!-- ═══════════════════════════════════════
-     MOBILE TOP NAVIGATION BAR
-═══════════════════════════════════════ -->
-<div class="mobile-topbar" id="mobileTopbar">
-  <a href="dashboard.html" class="mobile-topbar-logo">
-    <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-      <rect width="40" height="40" rx="10" fill="var(--accent-cyan)"/>
-      <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
-      <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
-      <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
-    </svg>
-    <span>STACKLY</span>
-  </a>
-  <nav class="mobile-topbar-nav">
-    <a href="#" class="mobile-topbar-item active" data-tab="overview"><span class="material-icons">grid_view</span> Overview</a>
-    <a href="#" class="mobile-topbar-item" data-tab="shipments"><span class="material-icons">local_shipping</span> My Shipments</a>
-    <a href="#" class="mobile-topbar-item" data-tab="hubs"><span class="material-icons">favorite_border</span> Saved Hubs</a>
-    <a href="#" class="mobile-topbar-item" data-tab="operations"><span class="material-icons">account_balance_wallet</span> Operations</a>
-    <a href="#" class="mobile-topbar-item" data-tab="settings"><span class="material-icons">settings</span> Settings</a>
-    <a href="index.html" class="mobile-topbar-item mobile-topbar-logout"><span class="material-icons">logout</span> Logout</a>
-  </nav>
-</div>
+
+
+
+<!-- ═══ MOBILE STICKY MENUBAR ═══ -->
+<nav class="mob-topbar" aria-label="Mobile Navigation">
+  <div class="mob-topbar-header">
+    <a href="dashboard.html" class="mob-topbar-brand">
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="var(--accent-cyan)"/>
+        <path d="M10 13C10 13 14 10 20 10C26 10 30 13 30 13" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M10 20C10 20 14 17 20 17C26 17 30 20 30 20" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
+        <path d="M10 27C10 27 14 24 20 24C26 24 30 27 30 27" stroke="#060c16" stroke-width="2.8" stroke-linecap="round"/>
+      </svg>
+      <span>STACKLY</span>
+    </a>
+    <span class="mob-topbar-sub" id="mobSubtitle">Supply Chain Dashboard</span>
+  </div>
+  <div class="mob-topbar-pills">
+    <a href="#" class="mob-pill mob-pill-active" data-tab="overview">
+      <span class="material-icons">grid_view</span> Overview
+    </a>
+    <a href="#" class="mob-pill" data-tab="shipments">
+      <span class="material-icons">local_shipping</span> My Shipments
+    </a>
+    <a href="#" class="mob-pill" data-tab="hubs">
+      <span class="material-icons">favorite_border</span> Saved Hubs
+    </a>
+    <a href="#" class="mob-pill" data-tab="operations">
+      <span class="material-icons">account_balance_wallet</span> Operations
+    </a>
+    <a href="#" class="mob-pill" data-tab="settings">
+      <span class="material-icons">settings</span> Settings
+    </a>
+    <a href="index.html" class="mob-pill mob-pill-logout">
+      <span class="material-icons">logout</span> Logout
+    </a>
+  </div>
+</nav>
 
 <div class="dash-layout">
 
@@ -635,6 +651,36 @@
         });
       });
     });
+
+    // ═══════════════════════════════════════
+    // MOBILE PILL NAV — sync with sidebar tabs
+    // ═══════════════════════════════════════
+    const mobPills = document.querySelectorAll('.mob-pill[data-tab]');
+    mobPills.forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        const tabId = pill.getAttribute('data-tab');
+        if (!tabId) return;
+
+        // Activate this pill, deactivate others
+        mobPills.forEach(p => p.classList.remove('mob-pill-active'));
+        pill.classList.add('mob-pill-active');
+
+        // Show/hide tab panels
+        tabContents.forEach(content => {
+          content.style.display = (content.id === `tab-${tabId}`) ? 'block' : 'none';
+        });
+
+        // Scroll to top of main area for better UX
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // Sync subtitle with current role
+    const mobSub = document.getElementById('mobSubtitle');
+    if (mobSub) mobSub.textContent = sidebarSubtitles[role] || sidebarSubtitles.manager;
+
+
 
     // ═══════════════════════════════════════
     // POPULATE MY SHIPMENTS TAB

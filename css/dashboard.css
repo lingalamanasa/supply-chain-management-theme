@@ -696,91 +696,118 @@ body.dashboard-body {
   }
 }
 
-/* ══════════════════════════════════════
-   MOBILE TOP NAVIGATION BAR
-══════════════════════════════════════ */
-.mobile-topbar {
-  display: none; /* hidden on desktop */
+/* ════════════════════════════════════════
+   MOB-TOPBAR  — sticky mobile menubar
+   Visible only on screens ≤ 992px
+════════════════════════════════════════ */
+.mob-topbar {
+  display: none;          /* hidden on desktop */
 }
 
 @media (max-width: 992px) {
-  .dash-sidebar {
-    display: none !important;
-  }
-  .dash-main {
+
+  /* Hide the desktop sidebar completely */
+  .dash-sidebar { display: none !important; }
+  .dash-layout  { display: block !important; }
+  .dash-main    {
     margin-left: 0 !important;
-    padding-top: 0 !important;
+    padding: 20px 16px !important;
     width: 100% !important;
-    box-sizing: border-box !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
   }
-  .mobile-topbar {
+  .dash-header-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: stretch !important;
+  }
+
+  /* Show the mobile menubar */
+  .mob-topbar {
     display: block;
-    background: var(--dash-sidebar-bg);
-    border-bottom: 1px solid var(--dash-card-border);
+    background: var(--dash-sidebar-bg);   /* #060c16 */
+    border-bottom: 1px solid rgba(255,255,255,0.07);
     padding: 14px 16px 0;
     position: sticky;
     top: 0;
-    z-index: 200;
+    z-index: 9999;
+    width: 100%;
+    box-sizing: border-box;
   }
-  .mobile-topbar-logo {
+
+  /* Logo + subtitle row */
+  .mob-topbar-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .mob-topbar-brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-weight: 800;
     font-size: 1rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 12px;
+    letter-spacing: 0.12em;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
-  .mobile-topbar-nav {
+  .mob-topbar-sub {
+    font-size: 0.75rem;
+    color: var(--accent-cyan);
+    font-weight: 700;
+  }
+
+  /* Pill scroll row */
+  .mob-topbar-pills {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    gap: 6px;
+    gap: 7px;
     white-space: nowrap;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
-  .mobile-topbar-nav::-webkit-scrollbar { display: none; }
-  .mobile-topbar-item {
+  .mob-topbar-pills::-webkit-scrollbar { display: none; }
+
+  /* Individual pill */
+  .mob-pill {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
+    gap: 5px;
+    padding: 8px 15px;
     border-radius: 100px;
     font-size: 0.8rem;
     font-weight: 600;
     color: rgba(255,255,255,0.65);
+    background: rgba(255,255,255,0.06);
     text-decoration: none;
-    background: rgba(255,255,255,0.05);
-    transition: all 0.2s;
     flex-shrink: 0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
   }
-  .mobile-topbar-item .material-icons {
-    font-size: 1rem;
+  .mob-pill .material-icons { font-size: 0.95rem; }
+  .mob-pill:hover           { background: rgba(255,255,255,0.13); color: #fff; }
+
+  /* Active pill */
+  .mob-pill-active {
+    background: var(--accent-cyan) !important;
+    color: #060c16 !important;
+    font-weight: 700;
   }
-  .mobile-topbar-item:hover,
-  .mobile-topbar-item.active {
-    background: var(--accent-cyan);
-    color: #060c16;
+
+  /* Logout pill */
+  .mob-pill-logout {
+    color: #ef4444 !important;
+    background: rgba(239,68,68,0.1) !important;
+    border: 1px solid rgba(239,68,68,0.4) !important;
   }
-  .mobile-topbar-logout {
-    border: 1px solid rgba(239,68,68,0.5);
-    color: #EF4444;
-    background: transparent;
-  }
-  .mobile-topbar-logout:hover {
-    background: #EF4444;
-    color: white;
-  }
-  /* Sync mobile-topbar tab clicks with sidebar tab system */
-  .dash-layout {
-    flex-direction: column !important;
-  }
-  .dash-main {
-    padding: 20px 16px !important;
+  .mob-pill-logout:hover {
+    background: #ef4444 !important;
+    color: #fff !important;
   }
 }
