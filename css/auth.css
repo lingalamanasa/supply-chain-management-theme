@@ -18,13 +18,13 @@
 .auth-page-login {
   background: 
     linear-gradient(to right, rgba(10, 22, 40, 0.88), rgba(10, 22, 40, 0.65)),
-    url('../images/hero_poster.webp');
+    url('../images/hero_poster.webp?v=2');
 }
 
 .auth-page-register {
   background: 
     linear-gradient(to right, rgba(10, 22, 40, 0.65), rgba(10, 22, 40, 0.88)),
-    url('../images/about_hero.webp');
+    url('../images/about_hero.webp?v=2');
 }
 
 .auth-container {

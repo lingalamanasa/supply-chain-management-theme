@@ -15,7 +15,7 @@
 .about-hero-bg {
   position: absolute; inset: 0;
   background:
-    url('../images/about_hero.webp') center/cover no-repeat;
+    url('../images/about_hero.webp?v=2') center/cover no-repeat;
   opacity: 0.25;
   transform: scale(1.05);
   transition: transform 8s ease;
@@ -226,10 +226,10 @@
 .team-info { padding: 20px; }
 .team-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--navy); }
 .team-role { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; }
-.team-img-1 { background: url('../images/team_arjun.webp') center/cover no-repeat; }
-.team-img-2 { background: url('../images/team_lena.webp') center/cover no-repeat; }
-.team-img-3 { background: url('../images/team_marcus.webp') center/cover no-repeat; }
-.team-img-4 { background: url('../images/team_yuna.webp') center/cover no-repeat; }
+.team-img-1 { background: url('../images/team_arjun.webp?v=2') center/cover no-repeat; }
+.team-img-2 { background: url('../images/team_lena.webp?v=2') center/cover no-repeat; }
+.team-img-3 { background: url('../images/team_marcus.webp?v=2') center/cover no-repeat; }
+.team-img-4 { background: url('../images/team_yuna.webp?v=2') center/cover no-repeat; }
 
 /* ── 4. MISSION & VALUES ── */
 .values {
@@ -288,7 +288,7 @@
 .global-map {
   position: relative;
   height: 360px;
-  background: url('../images/world_map.webp') center/contain no-repeat;
+  background: url('../images/world_map.webp?v=2') center/contain no-repeat;
   opacity: 0.12;
 }
 .map-dot {
