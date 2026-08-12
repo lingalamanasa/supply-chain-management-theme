@@ -515,7 +515,9 @@
         { cols: ['SKU-9801 (Lithium Cells)', 'Rotterdam Hub', '4,200 units', 'Optimal Stock', 'High'], statusIdx: 3, badgeStyles: { 'Optimal Stock': 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' } },
         { cols: ['SKU-4412 (Microchips)', 'Singapore Wharf', '850 units', 'Reorder Alert', 'Critical'], statusIdx: 3, badgeStyles: { 'Reorder Alert': 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' } },
         { cols: ['SKU-7721 (Chassis)', 'Chicago Warehouse', '12,000 units', 'Overstocked', 'Low'], statusIdx: 3, badgeStyles: { 'Overstocked': 'background:rgba(184,134,11,0.12);color:#b8860b;border:1px solid rgba(184,134,11,0.3)' } },
-        { cols: ['SKU-1090 (Copper)', 'London Depot', '250 units', 'Stockout Risk', 'High'], statusIdx: 3, badgeStyles: { 'Stockout Risk': 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' } }
+        { cols: ['SKU-1090 (Copper)', 'London Depot', '250 units', 'Stockout Risk', 'High'], statusIdx: 3, badgeStyles: { 'Stockout Risk': 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' } },
+        { cols: ['SKU-5020 (Sensors)', 'Frankfurt Airport', '8,900 units', 'Optimal Stock', 'Medium'], statusIdx: 3, badgeStyles: { 'Optimal Stock': 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' } },
+        { cols: ['SKU-3321 (Motors)', 'Dubai Logistics City', '1,100 units', 'Reorder Alert', 'High'], statusIdx: 3, badgeStyles: { 'Reorder Alert': 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)' } }
       ],
       logistics: [
         { cols: ['LD-982', 'Maersk Line', 'Singapore (SIN)', 'Rotterdam (RTM)', 'Ocean Transit', 'Low Risk'], statusIdx: 4, badgeStyles: { 'Ocean Transit': 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)' } },
@@ -609,7 +611,10 @@
       { id: 'NX-3042', cargo: 'Industrial Robotics Parts', carrier: 'UPS Supply Chain', route: 'NRT → YVR', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'Arriving at port · ETA: 2 hours · Customs pre-cleared' },
       { id: 'NX-9102', cargo: 'Cold Chain Pharmaceuticals', carrier: 'Kuehne+Nagel', route: 'BOM → DXB', status: 'Delayed', statusClass: 'delayed', badgeStyle: 'background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.3)', details: 'Awaiting temperature logs · Held in quarantine zone · Temp: 2.1°C' },
       { id: 'NX-5529', cargo: 'Apparel & Textiles', carrier: 'MSC Shipping', route: 'SGN → LAX', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'Ocean Transit · Speed: 18 knots · Next port call: Honolulu' },
-      { id: 'NX-1093', cargo: 'Consumer Electronics', carrier: 'DHL Global Forwarding', route: 'HKG → FRA', status: 'Delivered', statusClass: 'delivered', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)', details: 'Unloaded at Gate 12 · Inventory reconciled without issues' }
+      { id: 'NX-1093', cargo: 'Consumer Electronics', carrier: 'DHL Global Forwarding', route: 'HKG → FRA', status: 'Delivered', statusClass: 'delivered', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)', details: 'Unloaded at Gate 12 · Inventory reconciled without issues' },
+      { id: 'NX-2204', cargo: 'Automotive Components', carrier: 'XPO Logistics', route: 'BER → MUN', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'Highway Transit · Speed: 80 km/h · ETA: 4.5 hours' },
+      { id: 'NX-6118', cargo: 'Aviation Turbines', carrier: 'DB Schenker', route: 'SEA → HND', status: 'In Transit', statusClass: 'transit', badgeStyle: 'background:rgba(0,242,254,0.12);color:#00f2fe;border:1px solid rgba(0,242,254,0.3)', details: 'Ocean Transit · Clear skies · Next port call: Tokyo' },
+      { id: 'NX-8032', cargo: 'Organic Produce', carrier: 'C.H. Robinson', route: 'MIA → NYC', status: 'Delivered', statusClass: 'delivered', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)', details: 'Quality check passed · Refrigeration logs verified' }
     ];
 
     const shipmentsGridEl = document.getElementById('shipmentsGrid');
@@ -672,7 +677,9 @@
       { name: 'Dubai Logistics City (DWC)', type: 'Air & Sea Hub', capacity: 81, health: 96, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
       { name: 'Los Angeles Port (LAX)', type: 'Seaport Hub', capacity: 96, health: 78, status: 'High Load', badgeStyle: 'background:rgba(184,134,11,0.12);color:#b8860b;border:1px solid rgba(184,134,11,0.3)' },
       { name: 'Frankfurt Airport Cargo (FRA)', type: 'Air Cargo Hub', capacity: 55, health: 99, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
-      { name: 'Shanghai Yangshan Port (PVG)', type: 'Deep Water Port', capacity: 88, health: 91, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' }
+      { name: 'Shanghai Yangshan Port (PVG)', type: 'Deep Water Port', capacity: 88, health: 91, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
+      { name: 'Miami International (MIA)', type: 'Air Cargo Hub', capacity: 70, health: 95, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' },
+      { name: 'Tokyo Haneda (HND)', type: 'Air Cargo Hub', capacity: 84, health: 89, status: 'Active', badgeStyle: 'background:rgba(16,185,129,0.12);color:#10b981;border:1px solid rgba(16,185,129,0.3)' }
     ];
 
     const hubsGridEl = document.getElementById('hubsGrid');
