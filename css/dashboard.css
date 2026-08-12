@@ -451,6 +451,13 @@ body.dashboard-body {
 }
 
 /* Shipments & Hubs Grid Cards */
+.shipments-grid, .hubs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
 .shipment-card, .hub-card {
   background: rgba(255,255,255,0.02);
   border: 1px solid var(--dash-card-border);
@@ -628,7 +635,7 @@ body.dashboard-body {
     grid-template-columns: 1fr 1fr !important;
     gap: 12px !important;
   }
-  .dash-bottom-grid {
+  .dash-bottom-grid, .shipments-grid, .hubs-grid {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
   }

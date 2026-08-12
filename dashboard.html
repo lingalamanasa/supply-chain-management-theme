@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=1200"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard — STACKLY Supply Chain Platform</title>
   <meta name="description" content="Stackly Executive Supply Chain Dashboard."/>
   <link rel="stylesheet" href="css/style.css"/>
@@ -224,7 +224,7 @@
             </select>
           </div>
         </div>
-        <div class="shipments-grid" id="shipmentsGrid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px;">
+        <div class="shipments-grid" id="shipmentsGrid">
           <!-- Loaded Dynamically via JS -->
         </div>
       </div>
@@ -239,7 +239,7 @@
             <span class="material-icons" style="font-size:14px;">add</span> Add New Hub
           </button>
         </div>
-        <div class="hubs-grid" id="hubsGrid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px;">
+        <div class="hubs-grid" id="hubsGrid">
           <!-- Loaded Dynamically via JS -->
         </div>
       </div>
@@ -709,7 +709,10 @@
       { icon: 'gavel', msg: 'Singapore Airport: Customs clearance processing initiated for Shipment SKU-4412.', time: '12:44:02' },
       { icon: 'warning', msg: 'System Alert: Port of Singapore reporting high congestion. Delay probability raised to 14%.', time: '12:40:15' },
       { icon: 'sync', msg: 'Core Telemetry Sync: Database transaction ledger updated successfully for 180 nodes.', time: '12:35:48' },
-      { icon: 'local_shipping', msg: 'FedEx Trucking (Route LD-045): Cargo departs Shanghai PVG depot. Transit active.', time: '12:28:11' }
+      { icon: 'local_shipping', msg: 'FedEx Trucking (Route LD-045): Cargo departs Shanghai PVG depot. Transit active.', time: '12:28:11' },
+      { icon: 'flight_land', msg: 'Air Freight Cargo (Flight AF-990): Landed at Frankfurt Airport (FRA). Cargo unloading underway.', time: '12:20:05' },
+      { icon: 'speed', msg: 'Warehouse Bin Optimization: Automated AMR units relocated 1,420 pallets in Chicago Hub.', time: '12:15:30' },
+      { icon: 'security', msg: 'Security Compliance Audit: ISO 28000 validation passed with 99.8% score across all 12 hubs.', time: '12:00:00' }
     ];
 
     const logsFeedEl = document.getElementById('operationsLogFeed');
