@@ -695,3 +695,92 @@ body.dashboard-body {
     transform: scale(1.05);
   }
 }
+
+/* ══════════════════════════════════════
+   MOBILE TOP NAVIGATION BAR
+══════════════════════════════════════ */
+.mobile-topbar {
+  display: none; /* hidden on desktop */
+}
+
+@media (max-width: 992px) {
+  .dash-sidebar {
+    display: none !important;
+  }
+  .dash-main {
+    margin-left: 0 !important;
+    padding-top: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+  }
+  .mobile-topbar {
+    display: block;
+    background: var(--dash-sidebar-bg);
+    border-bottom: 1px solid var(--dash-card-border);
+    padding: 14px 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+  }
+  .mobile-topbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+  .mobile-topbar-nav {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 6px;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .mobile-topbar-nav::-webkit-scrollbar { display: none; }
+  .mobile-topbar-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .mobile-topbar-item .material-icons {
+    font-size: 1rem;
+  }
+  .mobile-topbar-item:hover,
+  .mobile-topbar-item.active {
+    background: var(--accent-cyan);
+    color: #060c16;
+  }
+  .mobile-topbar-logout {
+    border: 1px solid rgba(239,68,68,0.5);
+    color: #EF4444;
+    background: transparent;
+  }
+  .mobile-topbar-logout:hover {
+    background: #EF4444;
+    color: white;
+  }
+  /* Sync mobile-topbar tab clicks with sidebar tab system */
+  .dash-layout {
+    flex-direction: column !important;
+  }
+  .dash-main {
+    padding: 20px 16px !important;
+  }
+}
