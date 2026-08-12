@@ -217,7 +217,7 @@ input, textarea, select { border: none; outline: none; font: inherit; }
   transition: var(--trans);
 }
 .mobile-menu a:hover { color: var(--gold-light); }
-.mobile-cta-link {
+.mobile-cta-link, .mobile-signup-btn {
   font-size: 1.1rem !important;
   background: var(--gold) !important;
   color: white !important;
@@ -226,6 +226,25 @@ input, textarea, select { border: none; outline: none; font: inherit; }
   font-family: 'Plus Jakarta Sans', sans-serif !important;
   font-weight: 700 !important;
   margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+.mobile-login-btn {
+  font-size: 1.1rem !important;
+  background: transparent !important;
+  border: 2px solid rgba(255,255,255,0.4) !important;
+  color: white !important;
+  padding: 10px 36px !important;
+  border-radius: 100px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700 !important;
+  margin-top: 6px;
+  display: inline-block;
+  text-decoration: none;
+}
+.mobile-login-btn:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold-light) !important;
 }
 
 /* ════════════════════════════════════════
