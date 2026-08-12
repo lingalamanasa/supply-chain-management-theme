@@ -915,3 +915,39 @@
 
 
 
+
+/* Hero Crossfade Slideshow */
+.hero-slideshow {
+  background: var(--navy);
+}
+.hero-slideshow .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: heroCrossfade 18s infinite;
+  transform: scale(1.05);
+}
+.hero-slideshow .slide-1 {
+  background-image: url('../images/hero_poster.webp?v=2');
+  animation-delay: 0s;
+}
+.hero-slideshow .slide-2 {
+  background-image: url('../images/control_tower.webp?v=2');
+  animation-delay: 6s;
+}
+.hero-slideshow .slide-3 {
+  background-image: url('../images/world_map.webp?v=2');
+  animation-delay: 12s;
+}
+
+@keyframes heroCrossfade {
+  0% { opacity: 0; transform: scale(1.05); }
+  10% { opacity: 1; transform: scale(1.0); }
+  33% { opacity: 1; transform: scale(1.0); }
+  43% { opacity: 0; transform: scale(1.05); }
+  100% { opacity: 0; transform: scale(1.05); }
+}
