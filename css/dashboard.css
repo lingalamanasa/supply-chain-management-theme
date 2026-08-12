@@ -666,3 +666,32 @@ body.dashboard-body {
   }
 }
 
+
+
+/* Mobile logout button styles */
+.sidebar-header-row {
+  margin-bottom: 8px;
+}
+.mobile-logout-btn {
+  display: none; /* hidden on desktop */
+}
+@media (max-width: 992px) {
+  .mobile-logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-right: 8px;
+    transition: transform 0.2s;
+  }
+  .mobile-logout-btn:hover {
+    transform: scale(1.05);
+  }
+}
