@@ -612,7 +612,7 @@
     // ═══════════════════════════════════════
     // SPA TAB-SWITCHING SYSTEM
     // ═══════════════════════════════════════
-    const tabLinks = document.querySelectorAll('#sidebarMenu .sidebar-item');
+    const tabLinks = document.querySelectorAll('#sidebarMenu .sidebar-item[data-tab]');
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabLinks.forEach(link => {
@@ -633,6 +633,19 @@
             content.style.display = 'none';
           }
         });
+      });
+    });
+
+    // Handle all Logout buttons (Sidebar & Mobile Drawer)
+    document.querySelectorAll('a[href="index.html"], .mob-drawer-logout').forEach(logoutBtn => {
+      logoutBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        try {
+          localStorage.removeItem('userEmail');
+          localStorage.removeItem('userUsername');
+          localStorage.removeItem('userRole');
+        } catch(err) {}
+        window.location.href = 'index.html';
       });
     });
 
