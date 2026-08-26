@@ -622,6 +622,13 @@ input, textarea, select { border: none; outline: none; font: inherit; }
   line-height: 1.8;
 }
 
+/* FAQ on dark sections */
+.faq .faq-q, .dark-section .faq-q { color: #ffffff; }
+.faq .faq-item, .dark-section .faq-item { border-bottom: 1px solid rgba(255,255,255,0.12); }
+.faq .faq-icon, .dark-section .faq-icon { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: #ffffff; }
+.faq .faq-item.open .faq-icon, .dark-section .faq-item.open .faq-icon { background: var(--gold); border-color: var(--gold); color: #0c1929; }
+.faq .faq-a p, .dark-section .faq-a p { color: rgba(255,255,255,0.85); }
+
 /* ════════════════════════════════════════
    PAGE HERO (non-video)
 ════════════════════════════════════════ */
