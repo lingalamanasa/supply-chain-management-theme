@@ -88,19 +88,23 @@ input, textarea, select { border: none; outline: none; font: inherit; }
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   flex-shrink: 0;
   text-decoration: none;
 }
-.nav-logo svg { flex-shrink: 0; }
+.nav-logo svg {
+  flex-shrink: 0;
+  color: var(--gold);
+}
 .nav-logo-text {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 800;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   color: #fff;
   transition: color 0.4s;
 }
+.navbar.scrolled .nav-logo svg { color: var(--gold); }
 .navbar.scrolled .nav-logo-text { color: var(--navy); }
 /* Nav links */
 .nav-links {
@@ -275,7 +279,10 @@ input, textarea, select { border: none; outline: none; font: inherit; }
   color: white;
   margin-bottom: 16px;
 }
-.footer-logo svg rect { fill: rgba(255,255,255,0.1); stroke: rgba(255,255,255,0.2); stroke-width: 1; }
+.footer-logo svg {
+  flex-shrink: 0;
+  color: var(--gold);
+}
 .footer-brand p {
   font-size: 0.85rem;
   line-height: 1.75;
@@ -738,14 +745,14 @@ input, textarea, select { border: none; outline: none; font: inherit; }
     align-items: center !important;
     gap: 10px !important;
   }
-  .nav-logo rect {
-    fill: #000000 !important;
+  .nav-logo svg {
+    color: var(--gold) !important;
   }
   .nav-logo-text {
-    color: #000000 !important;
+    color: var(--navy) !important;
     font-size: 1.25rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.05em !important;
+    letter-spacing: 0.06em !important;
   }
   .nav-links { display: none !important; }
   .nav-actions { display: none !important; }
