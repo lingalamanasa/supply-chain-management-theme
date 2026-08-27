@@ -91,21 +91,32 @@ input, textarea, select { border: none; outline: none; font: inherit; }
   gap: 10px;
   flex-shrink: 0;
   text-decoration: none;
+  line-height: 1;
 }
 .nav-logo svg {
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
   color: var(--gold);
+  fill: currentColor;
+  display: block;
 }
 .nav-logo-text {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #fff;
-  transition: color 0.4s;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  line-height: 1;
 }
-.navbar.scrolled .nav-logo svg { color: var(--gold); }
-.navbar.scrolled .nav-logo-text { color: var(--navy); }
+.navbar.scrolled .nav-logo svg {
+  color: var(--gold);
+  fill: currentColor;
+}
+.navbar.scrolled .nav-logo-text {
+  color: var(--navy);
+}
 /* Nav links */
 .nav-links {
   display: flex;
